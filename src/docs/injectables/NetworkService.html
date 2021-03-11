@@ -63,6 +63,34 @@
 
 
 
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get">get</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
 
             <section>
     <h3 id="constructor">Constructor</h3>
@@ -70,12 +98,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(args?: <a href="../classes/AppConfig.html">AppConfig</a>)</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, args?: <a href="../classes/AppConfig.html">AppConfig</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/shared/services/network.service.ts:5</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/shared/services/network.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -92,6 +120,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                                 <tr>
                                                         <td>args</td>
                                                   
@@ -113,18 +153,110 @@
         </table>
 </section>
 
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            get
+                        </b>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get(body: <a href="../interfaces/IHttpRequest.html">IHttpRequest</a>)</code>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="10"
+                            class="link-to-prism">src/shared/services/network.service.ts:10</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/IHttpRequest.html" target="_self" >IHttpRequest</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;
+import { Injectable } from &#x27;@angular/core&#x27;
 import { AppConfig } from &#x27;@helpers/app-config&#x27;
+import { IHttpRequest } from &#x27;@helpers/http-request&#x27;
+import { Observable } from &#x27;rxjs&#x27;
 
 @Injectable()
 export class NetworkService {
-  constructor(args?: AppConfig) { }
+  constructor(private http: HttpClient, private args?: AppConfig) { }
+  public get&lt;T&gt;(body: IHttpRequest): Observable&lt;T&gt; {
+    return this.http
+      .get&lt;T&gt;(body.provider + body.path ? &#x60;/${body.path}&#x60; : &#x27;&#x27;, { params: body.params });
+  }
 }
 </code></pre>
     </div>

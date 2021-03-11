@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IdentityService } from '@services/account.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'WebPals-Hub';
+  constructor(private identity: IdentityService) { this.identity.identityListener().toPromise(); }
 }

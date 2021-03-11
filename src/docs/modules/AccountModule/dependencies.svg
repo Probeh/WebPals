@@ -24,6 +24,10 @@
 <title>cluster_AccountModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="80,-70 80,-268 416,-268 416,-70 80,-70"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_AccountModule_exports</title>
+<polygon fill="none" stroke="black" points="169,-208 169,-260 317,-260 317,-208 169,-208"/>
+</g>
 <g id="clust4" class="cluster">
 <title>cluster_AccountModule_imports</title>
 <polygon fill="none" stroke="black" points="240,-78 240,-130 408,-130 408,-78 240,-78"/>
@@ -31,10 +35,6 @@
 <g id="clust2" class="cluster">
 <title>cluster_AccountModule_declarations</title>
 <polygon fill="none" stroke="black" points="88,-78 88,-130 232,-130 232,-78 88,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_AccountModule_exports</title>
-<polygon fill="none" stroke="black" points="169,-208 169,-260 317,-260 317,-208 169,-208"/>
 </g>
 <!-- AccountComponent -->
 <g id="node1" class="node">

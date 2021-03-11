@@ -3,5 +3,5 @@ import { AppConfig } from '@helpers/app-config';
 
 @Injectable()
 export class GithubService {
-  constructor(args?: AppConfig) { }
+  constructor(private args?: AppConfig) { }
 }
