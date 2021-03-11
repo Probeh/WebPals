@@ -2,6 +2,8 @@ import { PrimeNGConfig } from 'primeng/api'
 import { Component, OnInit } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 import { IdentityService } from '@services/account.service'
+import { IAccountModel } from '@models/account';
+import { ContainerService } from '@services/container.service';
 
 @Component({
   selector: 'app-container',
@@ -10,18 +12,22 @@ import { IdentityService } from '@services/account.service'
 })
 export class ContainerComponent implements OnInit {
   public route: string = '';
-  public showSidenav: boolean = true;
-  public isAuthenticated: boolean = false;
+  public sidenavClass: string;
+  public account: IAccountModel;
 
-  constructor(private primengConfig: PrimeNGConfig, private router: Router, private identity: IdentityService) {
+  constructor(private primengConfig: PrimeNGConfig, private router: Router, private identity: IdentityService, private container: ContainerService) {
     this.primengConfig.ripple = true;
-    this.isAuthenticated = this.identity.isAuthenticated;
+    this.account = this.identity.account;
+    this.sidenavClass = this.container.sidenavClass;
 
-    this.router.events.subscribe({
-      next: event =>
-        this.route = !(event instanceof NavigationEnd) ? this.route :
-          event.urlAfterRedirects.slice(1).replace('/', ' ')
-    });
+    this.router.events
+      .subscribe({
+        next: event =>
+          this.route = !(event instanceof NavigationEnd) ? this.route :
+            event.urlAfterRedirects.slice(1).replace('/', ' ')
+      });
+    this.identity.$authChanged
+      .subscribe({ next: result => this.account = result });
   }
   ngOnInit() { }
 }

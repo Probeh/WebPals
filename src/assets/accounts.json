@@ -1,7 +1,12 @@
-[
-  {
+{
+  "admin": {
     "name": "Administrator",
     "user": "admin",
     "pass": "admin"
+  },
+  "test": {
+    "name": "Test User",
+    "user": "test",
+    "pass": "test"
   }
-]
+}

@@ -9,6 +9,6 @@ export class NetworkService {
   constructor(private http: HttpClient, private args?: AppConfig) { }
   public get<T>(body: IHttpRequest): Observable<T> {
     return this.http
-      .get<T>(body.provider + body.path ? `/${body.path}` : '', { params: body.params });
+      .get<T>(body.path ? `${body.provider}/${body.path}` : body.provider, { params: body.params });
   }
 }

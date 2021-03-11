@@ -80,9 +80,9 @@ import { GithubComponent } from &#x27;@github/github.component&#x27;
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;, component: GithubComponent, children: [
-      { path: &#x27;search&#x27;, component: GitSearchComponent },
+      { path: &#x27;&#x27;, component: GitSearchComponent },
       { path: &#x27;profile&#x27;, component: GitProfileComponent },
-      { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;search&#x27; }
+      { path: &#x27;&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;&#x27; },
     ]
   }
 ];

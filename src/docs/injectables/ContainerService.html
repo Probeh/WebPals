@@ -63,6 +63,34 @@
 
 
 
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sidenavClass">sidenavClass</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
 
             <section>
     <h3 id="constructor">Constructor</h3>
@@ -75,7 +103,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/shared/services/container.service.ts:5</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/shared/services/container.service.ts:6</a></div>
                             </td>
                         </tr>
 
@@ -114,17 +142,59 @@
 </section>
 
 
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidenavClass"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            sidenavClass</b>
+                            <a href="#sidenavClass"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;expanded&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/shared/services/container.service.ts:6</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;
 import { AppConfig } from &#x27;@helpers/app-config&#x27;;
 
 @Injectable()
 export class ContainerService {
-  constructor(args?: AppConfig) { }
+  public sidenavClass: string &#x3D; &#x27;expanded&#x27;;
+  constructor(private args?: AppConfig) {
+    this.sidenavClass &#x3D; args.expandSidenav ? &#x27;expanded&#x27; : &#x27;collapse&#x27;;
+  }
 }
 </code></pre>
     </div>

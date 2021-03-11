@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { IdentityService } from '@services/account.service';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { IdentityService } from '@services/account.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private identity: IdentityService) { this.identity.identityListener().toPromise(); }
+  constructor() { }
 }

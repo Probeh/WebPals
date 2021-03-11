@@ -7,9 +7,9 @@ import { GithubComponent } from '@github/github.component'
 const routes: Routes = [
   {
     path: '', component: GithubComponent, children: [
-      { path: 'search', component: GitSearchComponent },
+      { path: '', component: GitSearchComponent },
       { path: 'profile', component: GitProfileComponent },
-      { path: '**', pathMatch: 'full', redirectTo: 'search' }
+      { path: '', pathMatch: 'full', redirectTo: '' },
     ]
   }
 ];

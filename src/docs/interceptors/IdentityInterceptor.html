@@ -119,8 +119,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="7"
-                            class="link-to-prism">src/shared/interceptors/account.interceptor.ts:7</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="9"
+                            class="link-to-prism">src/shared/interceptors/account.interceptor.ts:9</a></div>
                 </td>
             </tr>
 
@@ -186,15 +186,36 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
+import { map } from &#x27;rxjs/operators&#x27;
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from &#x27;@angular/common/http&#x27;
 import { Injectable } from &#x27;@angular/core&#x27;
+import { Providers } from &#x27;@enums/provider.enum&#x27;
 
 @Injectable()
 export class IdentityInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
-    return next.handle(req);
+    const original &#x3D; req.clone();
+    const username &#x3D; original.url.split(&#x60;${Providers.Identity}/&#x60;)[1];
+
+    if (req.url.startsWith(Providers.Identity)) {
+      req &#x3D; req.clone({
+        url: &#x27;./assets/accounts.json&#x27;
+      });
+    }
+    return next.handle(req)
+      .pipe(
+        map(result &#x3D;&gt; {
+          if (result instanceof HttpResponse) {
+            if (original.url.startsWith(Providers.Identity)) {
+              return new HttpResponse({ body: result.body[username] });
+            }
+          }
+          return result;
+        })
+      );
   }
-}</code></pre>
+}
+</code></pre>
     </div>
 </div>
 

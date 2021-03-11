@@ -122,6 +122,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loginForm">loginForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -132,7 +147,15 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initForm">initForm</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onLogin">onLogin</a>
                             </li>
                         </ul>
                     </td>
@@ -152,15 +175,57 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(identtiy: <a href="../injectables/IdentityService.html">IdentityService</a>, message: <a href="../injectables/MessageService.html">MessageService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/account/account.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/account/account.component.ts:14</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>identtiy</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/IdentityService.html" target="_self" >IdentityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>message</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MessageService.html" target="_self" >MessageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -174,6 +239,47 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initForm"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            initForm
+                        </b>
+                        <a href="#initForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/account/account.component.ts:17</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -196,8 +302,49 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/account/account.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/account/account.component.ts:16</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLogin"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onLogin
+                        </b>
+                        <a href="#onLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/account/account.component.ts:24</a></div>
                 </td>
             </tr>
 
@@ -214,12 +361,51 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginForm"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loginForm</b>
+                            <a href="#loginForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/account/account.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
+import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;
+import { MessageType } from &#x27;@enums/message.enum&#x27;
+import { IAccountModel } from &#x27;@models/account&#x27;
+import { IdentityService } from &#x27;@services/account.service&#x27;
+import { MessageService } from &#x27;@services/message.service&#x27;
 
 @Component({
   selector: &#x27;app-account&#x27;,
@@ -227,20 +413,84 @@
   styleUrls: [&#x27;./account.component.scss&#x27;]
 })
 export class AccountComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  public loginForm: FormGroup;
+  constructor(private identtiy: IdentityService, private message: MessageService) { this.initForm(); }
+  ngOnInit() { }
+  private initForm() {
+    this.loginForm &#x3D; new FormGroup({
+      &#x27;user&#x27;: new FormControl(&#x27;&#x27;, Validators.required),
+      &#x27;pass&#x27;: new FormControl(&#x27;&#x27;, Validators.required),
+      &#x27;rememberMe&#x27;: new FormControl(true)
+    })
   }
+  public onLogin() {
+    this.identtiy
+      .userLogin(this.loginForm.value)
+      .then((result: IAccountModel) &#x3D;&gt; {
+        this.message.show(&#x27;Logged In!&#x27;, &#x60;Welcome ${result.name}&#x60;, MessageType.Success);
+        this.initForm();
+      })
+      .catch((error: Error) &#x3D;&gt; {
+        this.loginForm.setErrors({ credentials: error.message });
+        this.loginForm.controls.user.setErrors({ username: &#x27;Invalid username&#x27; });
+        this.loginForm.controls.pass.setErrors({ password: &#x27;Invalid password&#x27; });
 
+        this.message.show(&#x27;Login Failed&#x27;, error.message, MessageType.Error);
+      });
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  account works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card card-form&quot;&gt;
+  &lt;div class&#x3D;&quot;card-header shadow bg-info text-white&quot;&gt;
+    &lt;i class&#x3D;&quot;fa fa-user&quot;&gt;&lt;/i&gt;Account Login
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;form (ngSubmit)&#x3D;&quot;this.onLogin()&quot; [formGroup]&#x3D;&quot;this.loginForm&quot;&gt;
+      &lt;div class&#x3D;&quot;p-float-label p-input-icon-left&quot;&gt;
+        &lt;i class&#x3D;&quot;pi pi-user&quot;&gt;&lt;/i&gt;
+        &lt;input
+          #username
+          formControlName&#x3D;&quot;user&quot;
+          type&#x3D;&quot;text&quot;
+          id&#x3D;&quot;username&quot;
+          autocomplete&#x3D;&quot;off&quot;
+          pInputText
+        /&gt;
+        &lt;label for&#x3D;&quot;username&quot;&gt;Username&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;p-float-label p-input-icon-left&quot;&gt;
+        &lt;i class&#x3D;&quot;pi pi-lock&quot;&gt;&lt;/i&gt;
+        &lt;input
+          #password
+          formControlName&#x3D;&quot;pass&quot;
+          type&#x3D;&quot;password&quot;
+          id&#x3D;&quot;password&quot;
+          autocomplete&#x3D;&quot;off&quot;
+          pInputText
+        /&gt;
+        &lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div
+        *ngIf&#x3D;&quot;this.loginForm.errors?.credentials&quot;
+        class&#x3D;&quot;alert alert-danger mb-4&quot;
+        role&#x3D;&quot;alert&quot;
+      &gt;
+        &lt;strong&gt;{{ this.loginForm.errors?.credentials }}&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;button
+        id&#x3D;&quot;login-btn&quot;
+        class&#x3D;&quot;btn btn-outline-info&quot;
+        [disabled]&#x3D;&quot;!this.loginForm.valid&quot;
+      &gt;
+        &lt;i class&#x3D;&quot;fa fa-sign-in&quot;&gt;&lt;/i&gt;
+        Login
+      &lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -248,7 +498,45 @@ export class AccountComponent implements OnInit {
                 <p class="comment">
                     <code>./account.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;common.scss&quot;;
+
+.card-form {
+  @extend .shadow;
+  margin: 100px auto;
+  width: 50%;
+  .card-header {
+    padding: 15px;
+    font-size: 24px;
+  }
+  .card-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+
+    form {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+    }
+
+    .p-float-label {
+      margin-bottom: 25px;
+    }
+  }
+}
+.fa {
+  margin-right: 10px;
+}
+#login-btn {
+  font-size: 16px;
+  width: 50%;
+  border-radius: 20px;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -276,7 +564,7 @@ export class AccountComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  account works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card-form">  <div class="card-header shadow bg-info text-white">    <i class="fa fa-user"></i>Account Login  </div>  <div class="card-body">    <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">      <div class="p-float-label p-input-icon-left">        <i class="pi pi-user"></i>        <input          #username          formControlName="user"          type="text"          id="username"          autocomplete="off"          pInputText        />        <label for="username">Username</label>      </div>      <div class="p-float-label p-input-icon-left">        <i class="pi pi-lock"></i>        <input          #password          formControlName="pass"          type="password"          id="password"          autocomplete="off"          pInputText        />        <label for="password">Password</label>      </div>      <div        *ngIf="this.loginForm.errors?.credentials"        class="alert alert-danger mb-4"        role="alert"      >        <strong>{{ this.loginForm.errors?.credentials }}</strong>      </div>      <button        id="login-btn"        class="btn btn-outline-info"        [disabled]="!this.loginForm.valid"      >        <i class="fa fa-sign-in"></i>        Login      </button>    </form>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AccountComponent'};

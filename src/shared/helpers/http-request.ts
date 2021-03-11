@@ -1,8 +1,7 @@
-import { Providers } from '@enums/provider.enum'
 import { ISearchParams } from '@helpers/search-params'
 
 export interface IHttpRequest {
-  provider: Providers,
+  provider: string,
   path?: string,
   params?: ISearchParams
 }

@@ -255,7 +255,7 @@ export class NetworkService {
   constructor(private http: HttpClient, private args?: AppConfig) { }
   public get&lt;T&gt;(body: IHttpRequest): Observable&lt;T&gt; {
     return this.http
-      .get&lt;T&gt;(body.provider + body.path ? &#x60;/${body.path}&#x60; : &#x27;&#x27;, { params: body.params });
+      .get&lt;T&gt;(body.path ? &#x60;${body.provider}/${body.path}&#x60; : body.provider, { params: body.params });
   }
 }
 </code></pre>

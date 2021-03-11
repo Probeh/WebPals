@@ -55,55 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AccountModule.html" data-type="entity-link">AccountModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AccountModule-8115dbae2935e98ad60baa721e769d53"' : 'data-target="#xs-components-links-module-AccountModule-8115dbae2935e98ad60baa721e769d53"' }>
+                                            'data-target="#components-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' : 'data-target="#xs-components-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AccountModule-8115dbae2935e98ad60baa721e769d53"' :
-                                            'id="xs-components-links-module-AccountModule-8115dbae2935e98ad60baa721e769d53"' }>
-                                            <li class="link">
-                                                <a href="components/AccountComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AccountComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/AccountRoutingModule.html" data-type="entity-link">AccountRoutingModule</a>
-                            </li>
-                            <li class="link">
-                                <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-102ab266215476bc8cac12915ff2414a"' : 'data-target="#xs-components-links-module-AppModule-102ab266215476bc8cac12915ff2414a"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-102ab266215476bc8cac12915ff2414a"' :
-                                            'id="xs-components-links-module-AppModule-102ab266215476bc8cac12915ff2414a"' }>
-                                            <li class="link">
-                                                <a href="components/AppComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
-                            </li>
-                            <li class="link">
-                                <a href="modules/ContainerModule.html" data-type="entity-link">ContainerModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' : 'data-target="#xs-components-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' :
-                                            'id="xs-components-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' :
+                                            'id="xs-components-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' }>
                                             <li class="link">
                                                 <a href="components/AccountComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AccountComponent</a>
@@ -112,20 +70,92 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' : 'data-target="#xs-injectables-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' }>
+                                        'data-target="#injectables-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' : 'data-target="#xs-injectables-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' :
-                                        'id="xs-injectables-links-module-ContainerModule-3616ac22ad9da33b960bdbbce8629717"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' :
+                                        'id="xs-injectables-links-module-AccountModule-6c2422db39bf23849745577b41af926e"' }>
                                         <li class="link">
-                                            <a href="injectables/GithubService.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>GithubService</a>
+                                            <a href="injectables/MessageService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>MessageService</a>
                                         </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/AccountRoutingModule.html" data-type="entity-link">AccountRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' : 'data-target="#xs-components-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' :
+                                            'id="xs-components-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' }>
+                                            <li class="link">
+                                                <a href="components/AppComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' : 'data-target="#xs-injectables-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' :
+                                        'id="xs-injectables-links-module-AppModule-f43c6382f8cc0e76398618543148b3b6"' }>
                                         <li class="link">
                                             <a href="injectables/IdentityService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>IdentityService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ContainerModule.html" data-type="entity-link">ContainerModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' : 'data-target="#xs-components-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' :
+                                            'id="xs-components-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' }>
+                                            <li class="link">
+                                                <a href="components/AccountComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AccountComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' : 'data-target="#xs-injectables-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' :
+                                        'id="xs-injectables-links-module-ContainerModule-11cf9a3bb90891a7ae9b82b4766e8f19"' }>
+                                        <li class="link">
+                                            <a href="injectables/ContainerService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>ContainerService</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/GithubService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>GithubService</a>
                                         </li>
                                         <li class="link">
                                             <a href="injectables/NetworkService.html"
@@ -133,9 +163,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </li>
                                     </ul>
                                 </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/ContainerRoutingModule.html" data-type="entity-link">ContainerRoutingModule</a>
                             </li>
                             <li class="link">
                                 <a href="modules/GithubModule.html" data-type="entity-link">GithubModule</a>
@@ -221,6 +248,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <span class="icon ion-ios-arrow-down"></span>
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
+                                <li class="link">
+                                    <a href="injectables/ContainerService.html" data-type="entity-link">ContainerService</a>
+                                </li>
                                 <li class="link">
                                     <a href="injectables/GithubService.html" data-type="entity-link">GithubService</a>
                                 </li>

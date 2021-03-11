@@ -1,12 +1,13 @@
 <div class="app-container">
   <div
     class="container-sidenav"
-    [class]="this.showSidenav ? 'expanded' : 'collapse'"
+    *ngIf="this.account?.state"
+    [ngClass]="this.sidenavClass"
   >
     <app-sidenav></app-sidenav>
   </div>
   <div class="container-center">
-    <div class="container-navbar">
+    <div class="container-navbar" *ngIf="this.account?.state">
       <app-navbar></app-navbar>
     </div>
     <div class="container-content">

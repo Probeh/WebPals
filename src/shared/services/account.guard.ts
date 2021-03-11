@@ -4,13 +4,13 @@ import { IdentityService } from '@services/account.service'
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router, private identity: IdentityService) { }
+  constructor(private identity: IdentityService, private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (!this.identity.isAuthenticated) {
+    if (!this.identity.account.state) {
       this.router.navigate(['auth']);
-      return false;
     }
-    return true;
+    console.log(this.identity.account.state)
+    return this.identity.account.state;
   }
 }

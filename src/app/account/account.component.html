@@ -1,3 +1,48 @@
-<p>
-  account works!
-</p>
+<div class="card card-form">
+  <div class="card-header shadow bg-info text-white">
+    <i class="fa fa-user"></i>Account Login
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">
+      <div class="p-float-label p-input-icon-left">
+        <i class="pi pi-user"></i>
+        <input
+          #username
+          formControlName="user"
+          type="text"
+          id="username"
+          autocomplete="off"
+          pInputText
+        />
+        <label for="username">Username</label>
+      </div>
+      <div class="p-float-label p-input-icon-left">
+        <i class="pi pi-lock"></i>
+        <input
+          #password
+          formControlName="pass"
+          type="password"
+          id="password"
+          autocomplete="off"
+          pInputText
+        />
+        <label for="password">Password</label>
+      </div>
+      <div
+        *ngIf="this.loginForm.errors?.credentials"
+        class="alert alert-danger mb-4"
+        role="alert"
+      >
+        <strong>{{ this.loginForm.errors?.credentials }}</strong>
+      </div>
+      <button
+        id="login-btn"
+        class="btn btn-outline-info"
+        [disabled]="!this.loginForm.valid"
+      >
+        <i class="fa fa-sign-in"></i>
+        Login
+      </button>
+    </form>
+  </div>
+</div>

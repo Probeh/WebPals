@@ -119,45 +119,15 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(identity: <a href="../injectables/IdentityService.html">IdentityService</a>)</code>
+<code>constructor()</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/app.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app.component.ts:8</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>identity</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/IdentityService.html" target="_self" >IdentityService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
@@ -172,8 +142,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { IdentityService } from &#x27;@services/account.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;
 
 @Component({
   selector: &#x27;app-root&#x27;,
@@ -181,7 +150,7 @@ import { IdentityService } from &#x27;@services/account.service&#x27;;
   styleUrls: [&#x27;./app.component.scss&#x27;]
 })
 export class AppComponent {
-  constructor(private identity: IdentityService) { this.identity.identityListener().toPromise(); }
+  constructor() { }
 }
 </code></pre>
     </div>

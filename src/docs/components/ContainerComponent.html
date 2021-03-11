@@ -132,7 +132,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#isAuthenticated">isAuthenticated</a>
+                                <a href="#account">account</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -140,7 +140,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#showSidenav">showSidenav</a>
+                                <a href="#sidenavClass">sidenavClass</a>
                             </li>
                         </ul>
                     </td>
@@ -175,12 +175,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(primengConfig: PrimeNGConfig, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, identity: <a href="../injectables/IdentityService.html">IdentityService</a>)</code>
+<code>constructor(primengConfig: PrimeNGConfig, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, identity: <a href="../injectables/IdentityService.html">IdentityService</a>, container: <a href="../injectables/ContainerService.html">ContainerService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -233,6 +233,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>container</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ContainerService.html" target="_self" >ContainerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -273,8 +285,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/container/container.component.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/container/container.component.ts:32</a></div>
                 </td>
             </tr>
 
@@ -300,29 +312,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="isAuthenticated"></a>
+                        <a name="account"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            isAuthenticated</b>
-                            <a href="#isAuthenticated"><span class="icon ion-ios-link"></span></a>
+                            account</b>
+                            <a href="#account"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                            <i>Type : </i>        <code><a href="../interfaces/IAccountModel.html" target="_self" >IAccountModel</a></code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>false</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -355,7 +362,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/container/container.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -366,29 +373,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="showSidenav"></a>
+                        <a name="sidenavClass"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            showSidenav</b>
-                            <a href="#showSidenav"><span class="icon ion-ios-link"></span></a>
+                            sidenavClass</b>
+                            <a href="#sidenavClass"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>true</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/container/container.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -405,6 +407,8 @@
 import { Component, OnInit } from &#x27;@angular/core&#x27;
 import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
 import { IdentityService } from &#x27;@services/account.service&#x27;
+import { IAccountModel } from &#x27;@models/account&#x27;;
+import { ContainerService } from &#x27;@services/container.service&#x27;;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -413,18 +417,22 @@ import { IdentityService } from &#x27;@services/account.service&#x27;
 })
 export class ContainerComponent implements OnInit {
   public route: string &#x3D; &#x27;&#x27;;
-  public showSidenav: boolean &#x3D; true;
-  public isAuthenticated: boolean &#x3D; false;
+  public sidenavClass: string;
+  public account: IAccountModel;
 
-  constructor(private primengConfig: PrimeNGConfig, private router: Router, private identity: IdentityService) {
+  constructor(private primengConfig: PrimeNGConfig, private router: Router, private identity: IdentityService, private container: ContainerService) {
     this.primengConfig.ripple &#x3D; true;
-    this.isAuthenticated &#x3D; this.identity.isAuthenticated;
+    this.account &#x3D; this.identity.account;
+    this.sidenavClass &#x3D; this.container.sidenavClass;
 
-    this.router.events.subscribe({
-      next: event &#x3D;&gt;
-        this.route &#x3D; !(event instanceof NavigationEnd) ? this.route :
-          event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)
-    });
+    this.router.events
+      .subscribe({
+        next: event &#x3D;&gt;
+          this.route &#x3D; !(event instanceof NavigationEnd) ? this.route :
+            event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)
+      });
+    this.identity.$authChanged
+      .subscribe({ next: result &#x3D;&gt; this.account &#x3D; result });
   }
   ngOnInit() { }
 }
@@ -435,12 +443,13 @@ export class ContainerComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot;&gt;
   &lt;div
     class&#x3D;&quot;container-sidenav&quot;
-    [class]&#x3D;&quot;this.showSidenav ? &#x27;expanded&#x27; : &#x27;collapse&#x27;&quot;
+    *ngIf&#x3D;&quot;this.account?.state&quot;
+    [ngClass]&#x3D;&quot;this.sidenavClass&quot;
   &gt;
     &lt;app-sidenav&gt;&lt;/app-sidenav&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;container-center&quot;&gt;
-    &lt;div class&#x3D;&quot;container-navbar&quot;&gt;
+    &lt;div class&#x3D;&quot;container-navbar&quot; *ngIf&#x3D;&quot;this.account?.state&quot;&gt;
       &lt;app-navbar&gt;&lt;/app-navbar&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;container-content&quot;&gt;
@@ -531,7 +540,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div    class="container-sidenav"    [class]="this.showSidenav ? \'expanded\' : \'collapse\'"  >    <app-sidenav></app-sidenav>  </div>  <div class="container-center">    <div class="container-navbar">      <app-navbar></app-navbar>    </div>    <div class="container-content">      <ng-content #content></ng-content>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div    class="container-sidenav"    *ngIf="this.account?.state"    [ngClass]="this.sidenavClass"  >    <app-sidenav></app-sidenav>  </div>  <div class="container-center">    <div class="container-navbar" *ngIf="this.account?.state">      <app-navbar></app-navbar>    </div>    <div class="container-content">      <ng-content #content></ng-content>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

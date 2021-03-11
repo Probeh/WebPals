@@ -1,50 +1,51 @@
-import { Observable, Subject } from 'rxjs'
+import { Subject } from 'rxjs'
 import { tap } from 'rxjs/operators'
 import { Injectable } from '@angular/core'
+import { Router } from '@angular/router'
 import { Providers } from '@enums/provider.enum'
-import { AppConfig } from '@helpers/app-config'
 import { IAccountModel } from '@models/account'
 import { NetworkService } from '@services/network.service'
 
 @Injectable()
 export class IdentityService {
-  public isAuthenticated: boolean = false;
-  private $authChanged: Subject<IAccountModel> = new Subject();
-  private account: IAccountModel;
-  constructor(private network: NetworkService, private args?: AppConfig) { }
-
-  public identityListener(): Observable<IAccountModel> {
-    return new Observable(emitter => {
-      console.log('New identityListener subscription');
-      if ((!this.isAuthenticated || !this.account) && localStorage.getItem('Identity')) {
-        console.log('Identity found in storage');
-        this.account = JSON.parse(localStorage.getItem('Identity'));
-        this.isAuthenticated = true;
-      }
-      this.$authChanged.subscribe({
-        next: (result: IAccountModel) => {
-          console.log('AuthState changed');
-          this.account = result;
-          this.isAuthenticated = result?.state;
-          emitter.next(this.account);
+  public $authChanged: Subject<IAccountModel> = new Subject();
+  public account: IAccountModel = { state: false };
+  constructor(private network: NetworkService, private router: Router) {
+    this.$authChanged.subscribe({
+      next: (result: IAccountModel) => {
+        if (result.state) {
+          localStorage.setItem('Identity', JSON.stringify(result));
+          this.router.navigate(['search']);
         }
-      });
-      emitter.next(this.account)
+        else localStorage.removeItem('Identity');
+        this.account = result;
+      }
+    });
+    this.initIdentity();
+  }
+
+  private initIdentity(): Promise<void> {
+    return Promise.resolve().then(() => {
+      if (!this.account.state && localStorage.getItem('Identity')) {
+        this.$authChanged.next(JSON.parse(localStorage.getItem('Identity')));
+      }
     });
   }
+
   public userLogin(account: IAccountModel): Promise<IAccountModel> {
     return this.network
-      .get<IAccountModel>({ provider: Providers.Identity })
+      .get<IAccountModel>({ provider: Providers.Identity, path: account.user })
       .pipe(tap((result: IAccountModel) => {
-        this.$authChanged.next({ name: result.name, user: result.user, state: true });
-        localStorage.setItem('Identity', JSON.stringify(result));
+        if (result?.user == account.user && result?.pass == account.pass) {
+          this.$authChanged.next({ name: result.name, user: result.user, state: true });
+        }
+        else throw Error('Invalid username or password');
       }))
       .toPromise();
   }
   public userLogout(): Promise<void> {
     return Promise.resolve().then(() => {
-      if (this.isAuthenticated && localStorage.getItem('Identity')) {
-        localStorage.removeItem('Identity');
+      if (localStorage.getItem('Identity')) {
         this.$authChanged.next({ state: false });
       }
     })
