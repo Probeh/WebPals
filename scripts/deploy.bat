@@ -1,0 +1,1 @@
+start update && ng build --prod & firebase deploy & start chrome https://webpals-hub.web.app/ & exit

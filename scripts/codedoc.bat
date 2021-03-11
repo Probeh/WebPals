@@ -1,0 +1,1 @@
+compodoc -p tsconfig.json -d src/docs -n WebPals-Hub ./ --hideGenerator --theme readthedocs && exit
