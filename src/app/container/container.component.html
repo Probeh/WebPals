@@ -1,3 +1,16 @@
-<p>
-  container works!
-</p>
+<div class="app-container">
+  <div
+    class="container-sidenav"
+    [class]="this.showSidenav ? 'expanded' : 'collapse'"
+  >
+    <app-sidenav></app-sidenav>
+  </div>
+  <div class="container-center">
+    <div class="container-navbar">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="container-content">
+      <ng-content #content></ng-content>
+    </div>
+  </div>
+</div>

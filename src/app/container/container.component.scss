@@ -1,0 +1,48 @@
+* {
+  div {
+    border: 1px solid black;
+  }
+}
+.app-container {
+  height: 100vh;
+  margin: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  padding: 0;
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  .container-sidenav {
+    height: 100vh;
+  }
+  .collapse {
+    width: 50px;
+    max-width: 50px;
+    transition: ease-in-out 250ms;
+  }
+  .expanded {
+    width: 250px;
+    max-width: 250px;
+    transition: ease-in-out 250ms;
+  }
+  .container-center {
+    flex: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .container-navbar {
+      max-height: 40px;
+      height: 40px;
+    }
+    .container-content {
+      flex: auto;
+      max-height: calc(100vh-40px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.app-sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .sidenav-toggle {
+    height: 40px;
+  }
+  .sidenav-start {
+    height: 100px;
+  }
+  .sidenav-center {
+    flex: auto;
+  }
+  .sidenav-bottom {
+    height: 100px;
+  }
+}

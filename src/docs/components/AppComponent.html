@@ -203,7 +203,10 @@ export class AppComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;app-container&gt;
+  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+&lt;/app-container&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -238,8 +241,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'}];
+        var COMPONENT_TEMPLATE = '<div><app-container>  <router-outlet></router-outlet></app-container></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

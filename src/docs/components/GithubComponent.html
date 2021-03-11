@@ -238,9 +238,8 @@ export class GithubComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  github works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;github works!&lt;/p&gt;
+&lt;router-outlet&gt;&lt;/router-outlet&gt;
 </code></pre>
     </div>
 
@@ -276,8 +275,8 @@ export class GithubComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  github works!</p></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'}];
+        var COMPONENT_TEMPLATE = '<div><p>github works!</p><router-outlet></router-outlet></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GithubComponent'};
 </script>

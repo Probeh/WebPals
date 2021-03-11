@@ -22,9 +22,8 @@
       "@helpers/*": ["src/shared/helpers/*"],
       "@interceptors/*": ["src/shared/interceptors/*"],
       "@models/*": ["src/shared/models/*"],
-      "@profile/*": ["src/app/profile/*"],
-      "@search/*": ["src/app/search/*"],
       "@services/*": ["src/shared/services/*"],
+      "@enums/*": ["src/shared/enums/*"],
       "@shared/*": ["src/shared/*"],
       "@client/*": ["src/app/*"]
     }

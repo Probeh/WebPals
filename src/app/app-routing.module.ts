@@ -4,8 +4,8 @@ import { AuthGuard } from '@services/account.guard';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
-  { path: '', canActivate: [AuthGuard], loadChildren: () => import('./container/container.module').then(m => m.ContainerModule) },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: 'search', loadChildren: () => import('./github/github.module').then(m => m.GithubModule), canActivate: [AuthGuard] },
+  { path: '**', pathMatch: 'full', redirectTo: 'search' }
 ];
 
 @NgModule({
