@@ -83,7 +83,45 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
-                                <a href="classes/AppPage.html" data-type="entity-link">AppPage</a>
+                                <a href="classes/AccountModel.html" data-type="entity-link">AccountModel</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/GitProfile.html" data-type="entity-link">GitProfile</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/GitSearch.html" data-type="entity-link">GitSearch</a>
+                            </li>
+                        </ul>
+                    </li>
+                        <li class="chapter">
+                            <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#injectables-links"' :
+                                'data-target="#xs-injectables-links"' }>
+                                <span class="icon ion-md-arrow-round-down"></span>
+                                <span>Injectables</span>
+                                <span class="icon ion-ios-arrow-down"></span>
+                            </div>
+                            <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
+                                <li class="link">
+                                    <a href="injectables/GithubService.html" data-type="entity-link">GithubService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/NetworkService.html" data-type="entity-link">NetworkService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/StorageService.html" data-type="entity-link">StorageService</a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
+                            'data-target="#xs-interfaces-links"' }>
+                            <span class="icon ion-md-information-circle-outline"></span>
+                            <span>Interfaces</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/IAccountModel.html" data-type="entity-link">IAccountModel</a>
                             </li>
                         </ul>
                     </li>

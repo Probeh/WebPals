@@ -11,7 +11,7 @@
     "codedoc": "start .\\scripts\\codedoc",
     "deploy": "start .\\scripts\\deploy",
     "snapshot": "start .\\scripts\\snapshot",
-    "update": "start .\\scripts\\update"
+    "update": "start npm run codedoc & start npm run snapshot & start npm run github && exit"
   },
   "private": true,
   "dependencies": {

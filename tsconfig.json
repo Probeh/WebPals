@@ -3,18 +3,33 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "es2015",
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@account/*": ["src/app/account/*"],
+      "@container/*": ["src/app/container/*"],
+      "@env/*": ["src/environments/*"],
+      "@github/*": ["src/app/github/*"],
+      "@helpers/*": ["src/shared/helpers/*"],
+      "@interceptors/*": ["src/shared/interceptors/*"],
+      "@models/*": ["src/shared/models/*"],
+      "@profile/*": ["src/app/profile/*"],
+      "@search/*": ["src/app/search/*"],
+      "@services/*": ["src/shared/services/*"],
+      "@shared/*": ["src/shared/*"],
+      "@client/*": ["src/app/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
   }
 }
