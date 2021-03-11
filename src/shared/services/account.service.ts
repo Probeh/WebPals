@@ -2,7 +2,7 @@ import { Observable } from 'rxjs'
 import { Injectable } from '@angular/core'
 import { AccountModel, IAccountModel } from '@models/account'
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class IdentityService {
   public isAuthenticated: boolean = false;
   constructor() { }

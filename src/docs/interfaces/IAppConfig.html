@@ -28,70 +28,63 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content module">
+               <div class="content interface">
                    <div class="content-data">
 
 
 
+
+
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-    <li>Modules</li>
-    <li>ContainerRoutingModule</li>
+  <li>Interfaces</li>
+  <li>IAppConfig</li>
 </ol>
 
-
 <ul class="nav nav-tabs" role="tablist">
-    <li  class="active" >
-        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
-
         <p class="comment">
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/container/container-routing.module.ts</code>
+            <code>src/shared/helpers/app-config.ts</code>
         </p>
 
 
 
 
-        <div class="container-fluid module">
-            <div class="row">
-            </div>
-        </div>
 
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface IAppConfig {
 
-const routes: Routes &#x3D; [];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ContainerRoutingModule { }
-</code></pre>
+}
+export class AppConfig {
+  constructor(args?: IAppConfig) {
+    Object.keys(args)
+      .forEach(key &#x3D;&gt; this[key] &#x3D; args[key]);
+  }
+}</code></pre>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
                    
@@ -115,8 +108,8 @@ export class ContainerRoutingModule { }
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'ContainerRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'IAppConfig.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

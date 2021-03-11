@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { AuthGuard } from '@services/account.guard'
 
-const routes: Routes = [
-  { path: '', canActivate: [AuthGuard], loadChildren: () => import('../github/github.module').then(m => m.GithubModule) },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
-];
+const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class ContainerRoutingModule { }
