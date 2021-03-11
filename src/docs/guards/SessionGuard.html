@@ -41,7 +41,7 @@
 
 <ol class="breadcrumb">
     <li>Guards</li>
-    <li>AuthGuard</li>
+    <li>SessionGuard</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -59,7 +59,7 @@
             <h3>File</h3>
             </p>
             <p class="comment">
-                <code>src/shared/services/account.guard.ts</code>
+                <code>src/shared/services/session.guard.ts</code>
             </p>
 
 
@@ -105,7 +105,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/shared/services/account.guard.ts:6</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/shared/services/session.guard.ts:6</a></div>
                             </td>
                         </tr>
 
@@ -183,7 +183,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/shared/services/account.guard.ts:9</a></div>
+                            class="link-to-prism">src/shared/services/session.guard.ts:9</a></div>
                 </td>
             </tr>
 
@@ -232,7 +232,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </div>
                     <div class="io-description">
@@ -248,18 +248,18 @@
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
             <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;
-import { ActivatedRouteSnapshot, CanActivate, NavigationStart, Router, RouterStateSnapshot } from &#x27;@angular/router&#x27;
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from &#x27;@angular/router&#x27;
 import { IdentityService } from &#x27;@services/account.service&#x27;
 
 @Injectable({ providedIn: &#x27;root&#x27; })
-export class AuthGuard implements CanActivate {
+export class SessionGuard implements CanActivate {
   constructor(private identity: IdentityService, private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (!this.identity.account.state) {
-      this.router.navigate([&#x27;auth&#x27;]);
+    if (this.identity.account.state) {
+      this.router.navigate([&#x27;search&#x27;]);
     }
-    return this.identity.account.state;
+    return !this.identity.account.state;
   }
 }</code></pre>
         </div>
@@ -291,7 +291,7 @@ export class AuthGuard implements CanActivate {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthGuard.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SessionGuard.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

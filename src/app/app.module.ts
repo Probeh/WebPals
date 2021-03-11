@@ -7,6 +7,7 @@ import { AppComponent            } from '@client/app.component'
 import { ContainerModule         } from '@container/container.module'
 import { AuthGuard               } from '@services/account.guard'
 import { IdentityService         } from '@services/account.service'
+import { SessionGuard            } from '@services/session.guard'
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import { IdentityService         } from '@services/account.service'
       expandSidenav: true
     }),
   ],
-  providers: [IdentityService, AuthGuard],
+  providers: [IdentityService, AuthGuard, SessionGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

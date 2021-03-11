@@ -444,7 +444,7 @@ export class AccountComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card card-form&quot;&gt;
-  &lt;div class&#x3D;&quot;card-header shadow bg-info text-white&quot;&gt;
+  &lt;div class&#x3D;&quot;card-header shadow bg-green text-white&quot;&gt;
     &lt;i class&#x3D;&quot;fa fa-user&quot;&gt;&lt;/i&gt;Account Login
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;card-body&quot;&gt;
@@ -482,7 +482,8 @@ export class AccountComponent implements OnInit {
       &lt;/div&gt;
       &lt;button
         id&#x3D;&quot;login-btn&quot;
-        class&#x3D;&quot;btn btn-outline-info&quot;
+        class&#x3D;&quot;btn&quot;
+        [ngClass]&#x3D;&quot;{ &#x27;btn-outline-primary&#x27;: this.loginForm.valid }&quot;
         [disabled]&#x3D;&quot;!this.loginForm.valid&quot;
       &gt;
         &lt;i class&#x3D;&quot;fa fa-sign-in&quot;&gt;&lt;/i&gt;
@@ -515,17 +516,6 @@ export class AccountComponent implements OnInit {
     justify-content: center;
     padding: 50px;
     text-align: center;
-
-    form {
-      width: 100%;
-    }
-    input {
-      width: 100%;
-    }
-
-    .p-float-label {
-      margin-bottom: 25px;
-    }
   }
 }
 .fa {
@@ -564,7 +554,7 @@ export class AccountComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card card-form">  <div class="card-header shadow bg-info text-white">    <i class="fa fa-user"></i>Account Login  </div>  <div class="card-body">    <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">      <div class="p-float-label p-input-icon-left">        <i class="pi pi-user"></i>        <input          #username          formControlName="user"          type="text"          id="username"          autocomplete="off"          pInputText        />        <label for="username">Username</label>      </div>      <div class="p-float-label p-input-icon-left">        <i class="pi pi-lock"></i>        <input          #password          formControlName="pass"          type="password"          id="password"          autocomplete="off"          pInputText        />        <label for="password">Password</label>      </div>      <div        *ngIf="this.loginForm.errors?.credentials"        class="alert alert-danger mb-4"        role="alert"      >        <strong>{{ this.loginForm.errors?.credentials }}</strong>      </div>      <button        id="login-btn"        class="btn btn-outline-info"        [disabled]="!this.loginForm.valid"      >        <i class="fa fa-sign-in"></i>        Login      </button>    </form>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card-form">  <div class="card-header shadow bg-green text-white">    <i class="fa fa-user"></i>Account Login  </div>  <div class="card-body">    <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">      <div class="p-float-label p-input-icon-left">        <i class="pi pi-user"></i>        <input          #username          formControlName="user"          type="text"          id="username"          autocomplete="off"          pInputText        />        <label for="username">Username</label>      </div>      <div class="p-float-label p-input-icon-left">        <i class="pi pi-lock"></i>        <input          #password          formControlName="pass"          type="password"          id="password"          autocomplete="off"          pInputText        />        <label for="password">Password</label>      </div>      <div        *ngIf="this.loginForm.errors?.credentials"        class="alert alert-danger mb-4"        role="alert"      >        <strong>{{ this.loginForm.errors?.credentials }}</strong>      </div>      <button        id="login-btn"        class="btn"        [ngClass]="{ \'btn-outline-primary\': this.loginForm.valid }"        [disabled]="!this.loginForm.valid"      >        <i class="fa fa-sign-in"></i>        Login      </button>    </form>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AccountComponent'};

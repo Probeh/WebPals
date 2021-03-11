@@ -381,17 +381,20 @@ export class SidenavComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-sidenav&quot;&gt;
   &lt;div class&#x3D;&quot;sidenav-header&quot;&gt;
+    &lt;div class&#x3D;&quot;font-pacifico&quot; [ngClass]&#x3D;&quot;{ hide: !this.state }&quot;&gt;Hub&lt;/div&gt;
     &lt;button class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;this.onToggleSidenav()&quot;&gt;
       &lt;i class&#x3D;&quot;fa fa-bars&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;sidenav-content&quot;&gt;
-    &lt;a class&#x3D;&quot;btn w-100&quot; [routerLink]&#x3D;&quot;[&#x27;search&#x27;]&quot;&gt;
-      &lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;
-      &lt;span class&#x3D;&quot;link-text ml-3&quot; [ngClass]&#x3D;&quot;{ hide: !this.state }&quot;
-        &gt;Search&lt;/span
+    &lt;div class&#x3D;&quot;w-100&quot; routerLinkActive&#x3D;&quot;active&quot;&gt;
+      &lt;a class&#x3D;&quot;btn w-100&quot; [routerLink]&#x3D;&quot;[&#x27;search&#x27;]&quot;&gt;
+        &lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;link-text ml-3&quot; [ngClass]&#x3D;&quot;{ hide: !this.state }&quot;
+          &gt;Search&lt;/span
+        &gt;&lt;/a
       &gt;
-    &lt;/a&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;sidenav-footer&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -411,7 +414,6 @@ export class SidenavComponent implements OnInit {
   justify-content: space-between;
 
   .sidenav-header {
-    @extend .shadow;
     width: 100%;
     color: white;
     background: $primary;
@@ -421,15 +423,24 @@ export class SidenavComponent implements OnInit {
     display: flex;
     align-items: center;
     position: relative;
+    .font-pacifico {
+      opacity: 100%;
+      padding-left: 10px;
+      font-size: 20px;
+      transition: ease-in-out 250ms;
+    }
+
     .btn {
       margin-right: 8px;
       right: 0px;
       position: absolute;
       border-radius: 50%;
       color: white;
+      transition: ease-in-out 250ms;
     }
     .btn:hover {
-      background: $primary;
+      transition: ease-in-out 250ms;
+      background: darken($color: $primary, $amount: 10%);
       border: 1px solid lighten($color: $primary, $amount: 10%);
     }
   }
@@ -438,20 +449,27 @@ export class SidenavComponent implements OnInit {
     flex: auto;
     overflow-y: auto;
     overflow-x: hidden;
+    background: $dark;
 
     .btn {
       height: 35px;
       max-height: 35px;
       text-align: left;
       position: relative;
-      color: $secondary;
-      border: 1px solid lighten($color: $primary, $amount: 20%);
       span {
         position: absolute;
       }
+      transition: ease-in-out 250ms;
     }
     .btn:hover {
-      border: 1px solid $dark;
+      transition: ease-in-out 250ms;
+      color: white;
+      background: $primary;
+    }
+    .btn:active {
+      transition: ease-in-out 250ms;
+      color: white;
+      background: darken($color: $primary, $amount: 10%);
     }
   }
   .sidenav-content:hover {
@@ -464,6 +482,18 @@ export class SidenavComponent implements OnInit {
 }
 .hide {
   display: none;
+}
+.active {
+  .btn * {
+    transition: ease-in-out 250ms;
+    color: $primary;
+  }
+}
+.active:hover {
+  .btn * {
+    color: white;
+    transition: ease-in-out 250ms;
+  }
 }
 </code></pre>
     </div>
@@ -493,7 +523,7 @@ export class SidenavComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-sidenav">  <div class="sidenav-header">    <button class="btn" (click)="this.onToggleSidenav()">      <i class="fa fa-bars"></i>    </button>  </div>  <div class="sidenav-content">    <a class="btn w-100" [routerLink]="[\'search\']">      <i class="fa fa-search"></i>      <span class="link-text ml-3" [ngClass]="{ hide: !this.state }"        >Search</span      >    </a>  </div>  <div class="sidenav-footer"></div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-sidenav">  <div class="sidenav-header">    <div class="font-pacifico" [ngClass]="{ hide: !this.state }">Hub</div>    <button class="btn" (click)="this.onToggleSidenav()">      <i class="fa fa-bars"></i>    </button>  </div>  <div class="sidenav-content">    <div class="w-100" routerLinkActive="active">      <a class="btn w-100" [routerLink]="[\'search\']">        <i class="fa fa-search"></i>        <span class="link-text ml-3" [ngClass]="{ hide: !this.state }"          >Search</span        ></a      >    </div>  </div>  <div class="sidenav-footer"></div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SidenavComponent'};

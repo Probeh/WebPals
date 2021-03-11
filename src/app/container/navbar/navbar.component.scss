@@ -1,7 +1,7 @@
 @import "common.scss";
 .app-navbar {
   align-items: center;
-  background: lighten($color: $primary, $amount: 10%);
+  background: $primary;
   color: white;
   display: flex;
   height: 40px;
@@ -11,8 +11,27 @@
 
   .navbar-start {
     flex: auto;
+    font-size: 20px;
   }
   .navbar-links {
     display: flex;
+    .btn:hover {
+      background: lighten($color: $primary, $amount: 10%);
+    }
   }
+}
+.dropdown-menu.show {
+  position: absolute;
+  padding: 0px;
+  border: none;
+}
+.dropdown-item {
+  color: $primary;
+  padding: 10px 10px;
+  position: relative;
+}
+.dropdown-item:hover {
+  transition: ease-in-out 250ms;
+  background: $primary;
+  color: white;
 }

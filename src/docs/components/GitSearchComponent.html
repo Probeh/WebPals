@@ -134,6 +134,10 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSearch">onSearch</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -152,15 +156,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(github: <a href="../injectables/GithubService.html">GithubService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/github/git-search/git-search.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/github/git-search/git-search.component.ts:9</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>github</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GithubService.html" target="_self" >GithubService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -196,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/github/git-search/git-search.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/app/github/git-search/git-search.component.ts:11</a></div>
                 </td>
             </tr>
 
@@ -213,6 +247,74 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearch"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onSearch
+                        </b>
+                        <a href="#onSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSearch(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/github/git-search/git-search.component.ts:12</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
 </div>
@@ -220,6 +322,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { GithubService } from &#x27;@services/github.service&#x27;;
 
 @Component({
   selector: &#x27;app-git-search&#x27;,
@@ -227,20 +330,29 @@
   styleUrls: [&#x27;./git-search.component.scss&#x27;]
 })
 export class GitSearchComponent implements OnInit {
+  constructor(private github: GithubService) { }
+  ngOnInit() { }
+  public onSearch(params) {
 
-  constructor() { }
-
-  ngOnInit() {
   }
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  git-search works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;form (ngSubmit)&#x3D;&quot;this.onSearch()&quot; class&#x3D;&quot;mt-3&quot;&gt;
+  &lt;div class&#x3D;&quot;p-float-label p-input-icon-left&quot;&gt;
+    &lt;i class&#x3D;&quot;fa fa-github&quot;&gt;&lt;/i&gt;
+    &lt;input
+      #search
+      type&#x3D;&quot;text&quot;
+      id&#x3D;&quot;search&quot;
+      autocomplete&#x3D;&quot;off&quot;
+      pInputText
+    /&gt;
+    &lt;label for&#x3D;&quot;search&quot;&gt;Search&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 </code></pre>
     </div>
 
@@ -276,7 +388,7 @@ export class GitSearchComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  git-search works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><form (ngSubmit)="this.onSearch()" class="mt-3">  <div class="p-float-label p-input-icon-left">    <i class="fa fa-github"></i>    <input      #search      type="text"      id="search"      autocomplete="off"      pInputText    />    <label for="search">Search</label>  </div></form></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GitSearchComponent'};

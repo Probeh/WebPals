@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../../node_modules/primeng/resources/themes/mdc-light-indigo/theme.css";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import "./themes.scss";
 html,
 body {
@@ -11,4 +12,13 @@ body {
   overflow: hidden;
   padding: 0;
   width: 100vw;
+}
+
+input,
+.p-inputtext,
+.p-float-label {
+  width: 100% !important;
+}
+.p-float-label {
+  margin-bottom: 25px;
 }

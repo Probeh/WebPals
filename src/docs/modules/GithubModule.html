@@ -70,13 +70,13 @@
 <title>cluster_GithubModule_imports</title>
 <polygon fill="none" stroke="black" points="244,-78 244,-130 404,-130 404,-78 244,-78"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_GithubModule_declarations</title>
-<polygon fill="none" stroke="black" points="92,-78 92,-130 236,-130 236,-78 92,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_GithubModule_exports</title>
 <polygon fill="none" stroke="black" points="171,-208 171,-260 319,-260 319,-208 171,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_GithubModule_declarations</title>
+<polygon fill="none" stroke="black" points="92,-78 92,-130 236,-130 236,-78 92,-78"/>
 </g>
 <!-- AccountComponent -->
 <g id="node1" class="node">
@@ -193,20 +193,22 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;
-import { NgModule } from &#x27;@angular/core&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { InputTextModule     } from &#x27;primeng/inputtext&#x27;
+import { CommonModule        } from &#x27;@angular/common&#x27;
+import { NgModule            } from &#x27;@angular/core&#x27;
 import { GitProfileComponent } from &#x27;@github/git-profile/git-profile.component&#x27;
-import { GitResultComponent } from &#x27;@github/git-result/git-result.component&#x27;
-import { GitSearchComponent } from &#x27;@github/git-search/git-search.component&#x27;
+import { GitResultComponent  } from &#x27;@github/git-result/git-result.component&#x27;
+import { GitSearchComponent  } from &#x27;@github/git-search/git-search.component&#x27;
 import { GithubRoutingModule } from &#x27;@github/github-routing.module&#x27;
-import { GithubComponent } from &#x27;@github/github.component&#x27;
+import { GithubComponent     } from &#x27;@github/github.component&#x27;
 
 const components &#x3D; [GithubComponent, GitSearchComponent, GitProfileComponent, GitResultComponent]
 
 @NgModule({
   imports: [
     CommonModule,
-    GithubRoutingModule
+    GithubRoutingModule,
+    InputTextModule
   ],
   declarations: components,
   exports: components,

@@ -1,16 +1,19 @@
 <div class="app-sidenav">
   <div class="sidenav-header">
+    <div class="font-pacifico" [ngClass]="{ hide: !this.state }">Hub</div>
     <button class="btn" (click)="this.onToggleSidenav()">
       <i class="fa fa-bars"></i>
     </button>
   </div>
   <div class="sidenav-content">
-    <a class="btn w-100" [routerLink]="['search']">
-      <i class="fa fa-search"></i>
-      <span class="link-text ml-3" [ngClass]="{ hide: !this.state }"
-        >Search</span
+    <div class="w-100" routerLinkActive="active">
+      <a class="btn w-100" [routerLink]="['search']">
+        <i class="fa fa-search"></i>
+        <span class="link-text ml-3" [ngClass]="{ hide: !this.state }"
+          >Search</span
+        ></a
       >
-    </a>
+    </div>
   </div>
   <div class="sidenav-footer"></div>
 </div>

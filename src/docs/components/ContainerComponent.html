@@ -285,8 +285,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/container/container.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/container/container.component.ts:33</a></div>
                 </td>
             </tr>
 
@@ -429,11 +429,8 @@ export class ContainerComponent implements OnInit {
       .subscribe({ next: result &#x3D;&gt; this.sidenav &#x3D; result });
     this.router.events
       .subscribe({
-        next: event &#x3D;&gt;{
-          this.route &#x3D; !(event instanceof NavigationEnd) ? this.route :
-            event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;);
-            console.log(event)
-        }
+        next: event &#x3D;&gt; this.route &#x3D; !(event instanceof NavigationEnd) ? this.route :
+          event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)
       });
     this.identity.$authChanged
       .subscribe({ next: result &#x3D;&gt; this.account &#x3D; result });
@@ -457,7 +454,7 @@ export class ContainerComponent implements OnInit {
       &lt;app-navbar&gt;&lt;/app-navbar&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;container-content&quot;&gt;
-      &lt;div class&#x3D;&quot;content-title&quot;&gt;{{ this.route }}&lt;/div&gt;
+      &lt;div class&#x3D;&quot;content-title shadow font-pacifico&quot;&gt;{{ this.route }}&lt;/div&gt;
       &lt;div class&#x3D;&quot;content-main&quot;&gt;
         &lt;ng-content #content&gt;&lt;/ng-content&gt;
       &lt;/div&gt;
@@ -512,14 +509,16 @@ export class ContainerComponent implements OnInit {
       .content-title {
         display: flex;
         align-items: center;
-        color: $gray;
-        padding: 0px 10px;
+        color: white;
+        padding: 0px 15px;
+        font-size: 35px;
+        background: lighten($color: $primary, $amount: 10%);
         text-transform: capitalize;
-        height: 40px;
+        height: 80px;
       }
       .content-main {
         padding: 10px;
-        height: calc(100% - 40px);
+        height: calc(100% - 80px);
         max-height: calc(100% - 80px);
         overflow-y: auto;
         overflow-x: hidden;
@@ -555,7 +554,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div    *ngIf="this.account?.state"    class="container-sidenav shadow"    [ngClass]="this.sidenav"  >    <app-sidenav></app-sidenav>  </div>  <div class="container-center">    <div class="container-navbar shadow" *ngIf="this.account?.state">      <app-navbar></app-navbar>    </div>    <div class="container-content">      <div class="content-title">{{ this.route }}</div>      <div class="content-main">        <ng-content #content></ng-content>      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div    *ngIf="this.account?.state"    class="container-sidenav shadow"    [ngClass]="this.sidenav"  >    <app-sidenav></app-sidenav>  </div>  <div class="container-center">    <div class="container-navbar shadow" *ngIf="this.account?.state">      <app-navbar></app-navbar>    </div>    <div class="container-content">      <div class="content-title shadow font-pacifico">{{ this.route }}</div>      <div class="content-main">        <ng-content #content></ng-content>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

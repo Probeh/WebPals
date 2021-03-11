@@ -7,7 +7,6 @@
   justify-content: space-between;
 
   .sidenav-header {
-    @extend .shadow;
     width: 100%;
     color: white;
     background: $primary;
@@ -17,15 +16,24 @@
     display: flex;
     align-items: center;
     position: relative;
+    .font-pacifico {
+      opacity: 100%;
+      padding-left: 10px;
+      font-size: 20px;
+      transition: ease-in-out 250ms;
+    }
+
     .btn {
       margin-right: 8px;
       right: 0px;
       position: absolute;
       border-radius: 50%;
       color: white;
+      transition: ease-in-out 250ms;
     }
     .btn:hover {
-      background: $primary;
+      transition: ease-in-out 250ms;
+      background: darken($color: $primary, $amount: 10%);
       border: 1px solid lighten($color: $primary, $amount: 10%);
     }
   }
@@ -34,20 +42,27 @@
     flex: auto;
     overflow-y: auto;
     overflow-x: hidden;
+    background: $dark;
 
     .btn {
       height: 35px;
       max-height: 35px;
       text-align: left;
       position: relative;
-      color: $secondary;
-      border: 1px solid lighten($color: $primary, $amount: 20%);
       span {
         position: absolute;
       }
+      transition: ease-in-out 250ms;
     }
     .btn:hover {
-      border: 1px solid $dark;
+      transition: ease-in-out 250ms;
+      color: white;
+      background: $primary;
+    }
+    .btn:active {
+      transition: ease-in-out 250ms;
+      color: white;
+      background: darken($color: $primary, $amount: 10%);
     }
   }
   .sidenav-content:hover {
@@ -60,4 +75,16 @@
 }
 .hide {
   display: none;
+}
+.active {
+  .btn * {
+    transition: ease-in-out 250ms;
+    color: $primary;
+  }
+}
+.active:hover {
+  .btn * {
+    color: white;
+    transition: ease-in-out 250ms;
+  }
 }

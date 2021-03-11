@@ -1,24 +1,24 @@
-$blue: #375a7f;
+$blue: #b58900;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #e83e8c;
-$red: #e74c3c;
+$red: #d33682;
 $orange: #fd7e14;
-$yellow: #f39c12;
-$green: #00bc8c;
+$yellow: #cb4b16;
+$green: #2aa198;
 $teal: #20c997;
-$cyan: #3498db;
+$cyan: #268bd2;
 $white: #fff;
-$gray: #888;
-$gray-dark: #303030;
-$primary: #375a7f;
-$secondary: #444;
-$success: #00bc8c;
-$info: #3498db;
-$warning: #f39c12;
-$danger: #e74c3c;
-$light: #adb5bd;
-$dark: #303030;
+$gray: #839496;
+$gray-dark: #073642;
+$primary: $teal;
+$secondary: #839496;
+$success: #2aa198;
+$info: #268bd2;
+$warning: #cb4b16;
+$danger: #d33682;
+$light: #fdf6e3;
+$dark: #073642;
 
 .bg-blue {
   background: $blue !important;
@@ -82,4 +82,235 @@ $dark: #303030;
 }
 .bg-dark {
   background: $dark !important;
+}
+.btn-outline-blue {
+  border: 1px solid $blue !important;
+  transition: ease-in-out 250ms;
+  color: $blue !important;
+}
+.btn-outline-blue:hover {
+  transition: ease-in-out 250ms;
+  background: $blue !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-indigo {
+  border: 1px solid $indigo !important;
+  transition: ease-in-out 250ms;
+  color: $indigo !important;
+}
+.btn-outline-indigo:hover {
+  transition: ease-in-out 250ms;
+  background: $indigo !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-purple {
+  border: 1px solid $purple !important;
+  transition: ease-in-out 250ms;
+  color: $purple !important;
+}
+.btn-outline-purple:hover {
+  transition: ease-in-out 250ms;
+  background: $purple !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-pink {
+  border: 1px solid $pink !important;
+  transition: ease-in-out 250ms;
+  color: $pink !important;
+}
+.btn-outline-pink:hover {
+  transition: ease-in-out 250ms;
+  background: $pink !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-red {
+  border: 1px solid $red !important;
+  transition: ease-in-out 250ms;
+  color: $red !important;
+}
+.btn-outline-red:hover {
+  transition: ease-in-out 250ms;
+  background: $red !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-orange {
+  border: 1px solid $orange !important;
+  transition: ease-in-out 250ms;
+  color: $orange !important;
+}
+.btn-outline-orange:hover {
+  transition: ease-in-out 250ms;
+  background: $orange !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-yellow {
+  border: 1px solid $yellow !important;
+  transition: ease-in-out 250ms;
+  color: $yellow !important;
+}
+.btn-outline-yellow:hover {
+  transition: ease-in-out 250ms;
+  background: $yellow !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-green {
+  border: 1px solid $green !important;
+  transition: ease-in-out 250ms;
+  color: $green !important;
+}
+.btn-outline-green:hover {
+  transition: ease-in-out 250ms;
+  background: $green !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-teal {
+  border: 1px solid $teal !important;
+  transition: ease-in-out 250ms;
+  color: $teal !important;
+}
+.btn-outline-teal:hover {
+  transition: ease-in-out 250ms;
+  background: $teal !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-cyan {
+  border: 1px solid $cyan !important;
+  transition: ease-in-out 250ms;
+  color: $cyan !important;
+}
+.btn-outline-cyan:hover {
+  transition: ease-in-out 250ms;
+  background: $cyan !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-white {
+  border: 1px solid $white !important;
+  transition: ease-in-out 250ms;
+  color: $white !important;
+}
+.btn-outline-white:hover {
+  transition: ease-in-out 250ms;
+  background: $white !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-gray {
+  border: 1px solid $gray !important;
+  transition: ease-in-out 250ms;
+  color: $gray !important;
+}
+.btn-outline-gray:hover {
+  transition: ease-in-out 250ms;
+  background: $gray !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-gray {
+  border: 1px solid $gray !important;
+  transition: ease-in-out 250ms;
+  color: $gray !important;
+}
+.btn-outline-gray:hover {
+  transition: ease-in-out 250ms;
+  background: $gray !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-primary {
+  border: 1px solid $primary !important;
+  transition: ease-in-out 250ms;
+  color: $primary !important;
+}
+.btn-outline-primary:hover {
+  transition: ease-in-out 250ms;
+  background: $primary !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-secondary {
+  border: 1px solid $secondary !important;
+  transition: ease-in-out 250ms;
+  color: $secondary !important;
+}
+.btn-outline-secondary:hover {
+  transition: ease-in-out 250ms;
+  background: $secondary !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-success {
+  border: 1px solid $success !important;
+  transition: ease-in-out 250ms;
+  color: $success !important;
+}
+.btn-outline-success:hover {
+  transition: ease-in-out 250ms;
+  background: $success !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-info {
+  border: 1px solid $info !important;
+  transition: ease-in-out 250ms;
+  color: $info !important;
+}
+.btn-outline-info:hover {
+  transition: ease-in-out 250ms;
+  background: $info !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-warning {
+  border: 1px solid $warning !important;
+  transition: ease-in-out 250ms;
+  color: $warning !important;
+}
+.btn-outline-warning:hover {
+  transition: ease-in-out 250ms;
+  background: $warning !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-danger {
+  border: 1px solid $danger !important;
+  transition: ease-in-out 250ms;
+  color: $danger !important;
+}
+.btn-outline-danger:hover {
+  transition: ease-in-out 250ms;
+  background: $danger !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-light {
+  border: 1px solid $light !important;
+  transition: ease-in-out 250ms;
+  color: $light !important;
+}
+.btn-outline-light:hover {
+  transition: ease-in-out 250ms;
+  background: $light !important;
+  color: $white !important;
+  cursor: pointer;
+}
+.btn-outline-dark {
+  border: 1px solid $dark !important;
+  transition: ease-in-out 250ms;
+  color: $dark !important;
+}
+.btn-outline-dark:hover {
+  transition: ease-in-out 250ms;
+  background: $dark !important;
+  color: $white !important;
+  cursor: pointer;
 }

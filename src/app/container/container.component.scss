@@ -39,14 +39,16 @@
       .content-title {
         display: flex;
         align-items: center;
-        color: $gray;
-        padding: 0px 10px;
+        color: white;
+        padding: 0px 15px;
+        font-size: 35px;
+        background: lighten($color: $primary, $amount: 10%);
         text-transform: capitalize;
-        height: 40px;
+        height: 80px;
       }
       .content-main {
         padding: 10px;
-        height: calc(100% - 40px);
+        height: calc(100% - 80px);
         max-height: calc(100% - 80px);
         overflow-y: auto;
         overflow-x: hidden;

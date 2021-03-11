@@ -1,5 +1,5 @@
 <div class="card card-form">
-  <div class="card-header shadow bg-info text-white">
+  <div class="card-header shadow bg-green text-white">
     <i class="fa fa-user"></i>Account Login
   </div>
   <div class="card-body">
@@ -37,7 +37,8 @@
       </div>
       <button
         id="login-btn"
-        class="btn btn-outline-info"
+        class="btn"
+        [ngClass]="{ 'btn-outline-primary': this.loginForm.valid }"
         [disabled]="!this.loginForm.valid"
       >
         <i class="fa fa-sign-in"></i>

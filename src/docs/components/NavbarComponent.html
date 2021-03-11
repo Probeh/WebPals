@@ -333,12 +333,12 @@ export class NavbarComponent implements OnInit {
         &lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;button class&#x3D;&quot;btn navbar-btn&quot;&gt;
+    &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;../../docs/overview.html&quot;&gt;
       &lt;i class&#x3D;&quot;fa fa-code text-white&quot;&gt;&lt;/i&gt;
-    &lt;/button&gt;
-    &lt;button class&#x3D;&quot;btn navbar-btn&quot;&gt;
+    &lt;/a&gt;
+    &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;https://github.com/probeh/webpals&quot;&gt;
       &lt;i class&#x3D;&quot;fa fa-github text-white&quot;&gt;&lt;/i&gt;
-    &lt;/button&gt;
+    &lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -351,7 +351,7 @@ export class NavbarComponent implements OnInit {
                 <pre class="line-numbers"><code class="language-scss">@import &quot;common.scss&quot;;
 .app-navbar {
   align-items: center;
-  background: lighten($color: $primary, $amount: 10%);
+  background: $primary;
   color: white;
   display: flex;
   height: 40px;
@@ -361,10 +361,29 @@ export class NavbarComponent implements OnInit {
 
   .navbar-start {
     flex: auto;
+    font-size: 20px;
   }
   .navbar-links {
     display: flex;
+    .btn:hover {
+      background: lighten($color: $primary, $amount: 10%);
+    }
   }
+}
+.dropdown-menu.show {
+  position: absolute;
+  padding: 0px;
+  border: none;
+}
+.dropdown-item {
+  color: $primary;
+  padding: 10px 10px;
+  position: relative;
+}
+.dropdown-item:hover {
+  transition: ease-in-out 250ms;
+  background: $primary;
+  color: white;
 }
 </code></pre>
     </div>
@@ -394,7 +413,7 @@ export class NavbarComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-navbar">  <div class="navbar-start">WebPals Hub</div>  <div class="navbar-links">    <div class="dropdown open">      <button        class="btn dropdown-toggle text-white"        type="button"        id="triggerId"        data-toggle="dropdown"        aria-haspopup="true"        aria-expanded="false"      >        <i class="fa fa-user-o"></i>      </button>      <div class="dropdown-menu" aria-labelledby="triggerId">        <button class="dropdown-item" (click)="this.userLogout()">          <i class="fa fa-sign-out mr-3"></i>Logout        </button>      </div>    </div>    <button class="btn navbar-btn">      <i class="fa fa-code text-white"></i>    </button>    <button class="btn navbar-btn">      <i class="fa fa-github text-white"></i>    </button>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-navbar">  <div class="navbar-start">WebPals Hub</div>  <div class="navbar-links">    <div class="dropdown open">      <button        class="btn dropdown-toggle text-white"        type="button"        id="triggerId"        data-toggle="dropdown"        aria-haspopup="true"        aria-expanded="false"      >        <i class="fa fa-user-o"></i>      </button>      <div class="dropdown-menu" aria-labelledby="triggerId">        <button class="dropdown-item" (click)="this.userLogout()">          <i class="fa fa-sign-out mr-3"></i>Logout        </button>      </div>    </div>    <a class="btn" target="_blank" href="../../docs/overview.html">      <i class="fa fa-code text-white"></i>    </a>    <a class="btn" target="_blank" href="https://github.com/probeh/webpals">      <i class="fa fa-github text-white"></i>    </a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};

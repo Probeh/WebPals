@@ -1,3 +1,13 @@
-<p>
-  git-search works!
-</p>
+<form (ngSubmit)="this.onSearch()" class="mt-3">
+  <div class="p-float-label p-input-icon-left">
+    <i class="fa fa-github"></i>
+    <input
+      #search
+      type="text"
+      id="search"
+      autocomplete="off"
+      pInputText
+    />
+    <label for="search">Search</label>
+  </div>
+</form>
