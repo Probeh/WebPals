@@ -1,7 +1,7 @@
 export interface IAccountModel {
   name: string;
   pass: string;
-  user: string;
+  user?: string;
 }
 export class AccountModel {
   public name: string;

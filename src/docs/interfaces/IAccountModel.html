@@ -86,6 +86,7 @@
                                         <a href="#pass">pass</a>
                                 </li>
                                 <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#user">user</a>
                                 </li>
                             </ul>
@@ -180,6 +181,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -194,7 +200,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface IAccountModel {
   name: string;
   pass: string;
-  user: string;
+  user?: string;
 }
 export class AccountModel {
   public name: string;
