@@ -264,7 +264,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>onSearch(params)</code>
+                    <code>onSearch(params?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
@@ -286,15 +286,19 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>params</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
 
                                     <td>
-                                        No
+                                        Yes
                                     </td>
 
 
@@ -332,7 +336,7 @@ import { GithubService } from &#x27;@services/github.service&#x27;;
 export class GitSearchComponent implements OnInit {
   constructor(private github: GithubService) { }
   ngOnInit() { }
-  public onSearch(params) {
+  public onSearch(params?: any) {
 
   }
 }

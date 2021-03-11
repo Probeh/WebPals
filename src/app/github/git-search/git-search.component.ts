@@ -9,7 +9,7 @@ import { GithubService } from '@services/github.service';
 export class GitSearchComponent implements OnInit {
   constructor(private github: GithubService) { }
   ngOnInit() { }
-  public onSearch(params) {
+  public onSearch(params?: any) {
 
   }
 }
