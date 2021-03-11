@@ -131,7 +131,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#state">state</a>
                             </li>
                         </ul>
@@ -171,12 +171,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(container: <a href="../injectables/ContainerService.html">ContainerService</a>)</code>
+<code>constructor(container: <a href="../injectables/ContainerService.html">ContainerService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -198,6 +198,18 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/ContainerService.html" target="_self" >ContainerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -245,8 +257,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:15</a></div>
                 </td>
             </tr>
 
@@ -286,8 +298,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:16</a></div>
                 </td>
             </tr>
 
@@ -316,7 +328,7 @@
                         <a name="state"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Public</span>
                             state</b>
                             <a href="#state"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -330,7 +342,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -344,6 +356,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
 import { ContainerService } from &#x27;@services/container.service&#x27;;
 
 @Component({
@@ -352,8 +365,8 @@ import { ContainerService } from &#x27;@services/container.service&#x27;;
   styleUrls: [&#x27;./sidenav.component.scss&#x27;]
 })
 export class SidenavComponent implements OnInit {
-  private state: boolean;
-  constructor(private container: ContainerService) {
+  public state: boolean;
+  constructor(private container: ContainerService, private router: Router) {
     this.state &#x3D; this.container.sidenavClass &#x3D;&#x3D; &#x27;expanded&#x27;;
   }
   ngOnInit() { }
@@ -372,7 +385,14 @@ export class SidenavComponent implements OnInit {
       &lt;i class&#x3D;&quot;fa fa-bars&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;sidenav-content&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;sidenav-content&quot;&gt;
+    &lt;a class&#x3D;&quot;btn w-100&quot; [routerLink]&#x3D;&quot;[&#x27;search&#x27;]&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+      &lt;span class&#x3D;&quot;link-text ml-3&quot; [ngClass]&#x3D;&quot;{ hide: !this.state }&quot;
+        &gt;Search&lt;/span
+      &gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
   &lt;div class&#x3D;&quot;sidenav-footer&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -414,10 +434,25 @@ export class SidenavComponent implements OnInit {
     }
   }
   .sidenav-content {
-    background: lighten($color: $primary, $amount: 10%);
+    padding: 10px 5px;
     flex: auto;
     overflow-y: auto;
     overflow-x: hidden;
+
+    .btn {
+      height: 35px;
+      max-height: 35px;
+      text-align: left;
+      position: relative;
+      color: $secondary;
+      border: 1px solid lighten($color: $primary, $amount: 20%);
+      span {
+        position: absolute;
+      }
+    }
+    .btn:hover {
+      border: 1px solid $dark;
+    }
   }
   .sidenav-content:hover {
     overflow: overlay;
@@ -426,6 +461,9 @@ export class SidenavComponent implements OnInit {
     background: $primary;
     height: 40px;
   }
+}
+.hide {
+  display: none;
 }
 </code></pre>
     </div>
@@ -455,7 +493,7 @@ export class SidenavComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-sidenav">  <div class="sidenav-header">    <button class="btn" (click)="this.onToggleSidenav()">      <i class="fa fa-bars"></i>    </button>  </div>  <div class="sidenav-content"></div>  <div class="sidenav-footer"></div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-sidenav">  <div class="sidenav-header">    <button class="btn" (click)="this.onToggleSidenav()">      <i class="fa fa-bars"></i>    </button>  </div>  <div class="sidenav-content">    <a class="btn w-100" [routerLink]="[\'search\']">      <i class="fa fa-search"></i>      <span class="link-text ml-3" [ngClass]="{ hide: !this.state }"        >Search</span      >    </a>  </div>  <div class="sidenav-footer"></div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SidenavComponent'};

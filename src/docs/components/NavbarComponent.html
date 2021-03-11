@@ -156,12 +156,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(identity: <a href="../injectables/IdentityService.html">IdentityService</a>, message: <a href="../injectables/MessageService.html">MessageService</a>)</code>
+<code>constructor(identity: <a href="../injectables/IdentityService.html">IdentityService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/container/navbar/navbar.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/container/navbar/navbar.component.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -183,18 +183,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/IdentityService.html" target="_self" >IdentityService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>message</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/MessageService.html" target="_self" >MessageService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -242,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:11</a></div>
                 </td>
             </tr>
 
@@ -283,8 +271,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -306,10 +294,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { MessageType } from &#x27;@enums/message.enum&#x27;;
-import { IdentityService } from &#x27;@services/account.service&#x27;;
-import { MessageService } from &#x27;@services/message.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
+import { IdentityService } from &#x27;@services/account.service&#x27;
 
 @Component({
   selector: &#x27;app-navbar&#x27;,
@@ -317,11 +303,10 @@ import { MessageService } from &#x27;@services/message.service&#x27;;
   styleUrls: [&#x27;./navbar.component.scss&#x27;]
 })
 export class NavbarComponent implements OnInit {
-  constructor(private identity: IdentityService, private message: MessageService) { }
+  constructor(private identity: IdentityService) { }
   ngOnInit() { }
   public userLogout() {
-    this.identity.userLogout()
-      .then(() &#x3D;&gt; this.message.show(&#x27;Signed out&#x27;, &#x27;&#x27;, MessageType.Warning));
+    this.identity.userLogout();
   }
 }
 </code></pre>
@@ -329,7 +314,7 @@ export class NavbarComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-navbar&quot;&gt;
-  &lt;div class&#x3D;&quot;navbar-start&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;navbar-start&quot;&gt;WebPals Hub&lt;/div&gt;
   &lt;div class&#x3D;&quot;navbar-links&quot;&gt;
     &lt;div class&#x3D;&quot;dropdown open&quot;&gt;
       &lt;button
@@ -409,7 +394,7 @@ export class NavbarComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-navbar">  <div class="navbar-start"></div>  <div class="navbar-links">    <div class="dropdown open">      <button        class="btn dropdown-toggle text-white"        type="button"        id="triggerId"        data-toggle="dropdown"        aria-haspopup="true"        aria-expanded="false"      >        <i class="fa fa-user-o"></i>      </button>      <div class="dropdown-menu" aria-labelledby="triggerId">        <button class="dropdown-item" (click)="this.userLogout()">          <i class="fa fa-sign-out mr-3"></i>Logout        </button>      </div>    </div>    <button class="btn navbar-btn">      <i class="fa fa-code text-white"></i>    </button>    <button class="btn navbar-btn">      <i class="fa fa-github text-white"></i>    </button>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-navbar">  <div class="navbar-start">WebPals Hub</div>  <div class="navbar-links">    <div class="dropdown open">      <button        class="btn dropdown-toggle text-white"        type="button"        id="triggerId"        data-toggle="dropdown"        aria-haspopup="true"        aria-expanded="false"      >        <i class="fa fa-user-o"></i>      </button>      <div class="dropdown-menu" aria-labelledby="triggerId">        <button class="dropdown-item" (click)="this.userLogout()">          <i class="fa fa-sign-out mr-3"></i>Logout        </button>      </div>    </div>    <button class="btn navbar-btn">      <i class="fa fa-code text-white"></i>    </button>    <button class="btn navbar-btn">      <i class="fa fa-github text-white"></i>    </button>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};

@@ -24,9 +24,11 @@ export class ContainerComponent implements OnInit {
       .subscribe({ next: result => this.sidenav = result });
     this.router.events
       .subscribe({
-        next: event =>
+        next: event =>{
           this.route = !(event instanceof NavigationEnd) ? this.route :
-            event.urlAfterRedirects.slice(1).replace('/', ' ')
+            event.urlAfterRedirects.slice(1).replace('/', ' ');
+            console.log(event)
+        }
       });
     this.identity.$authChanged
       .subscribe({ next: result => this.account = result });

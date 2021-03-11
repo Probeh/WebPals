@@ -30,9 +30,25 @@
     }
   }
   .sidenav-content {
+    padding: 10px 5px;
     flex: auto;
     overflow-y: auto;
     overflow-x: hidden;
+
+    .btn {
+      height: 35px;
+      max-height: 35px;
+      text-align: left;
+      position: relative;
+      color: $secondary;
+      border: 1px solid lighten($color: $primary, $amount: 20%);
+      span {
+        position: absolute;
+      }
+    }
+    .btn:hover {
+      border: 1px solid $dark;
+    }
   }
   .sidenav-content:hover {
     overflow: overlay;
@@ -41,4 +57,7 @@
     background: $primary;
     height: 40px;
   }
+}
+.hide {
+  display: none;
 }

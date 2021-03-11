@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContainerService } from '@services/container.service';
 
 @Component({
@@ -7,8 +8,8 @@ import { ContainerService } from '@services/container.service';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  private state: boolean;
-  constructor(private container: ContainerService) {
+  public state: boolean;
+  constructor(private container: ContainerService, private router: Router) {
     this.state = this.container.sidenavClass == 'expanded';
   }
   ngOnInit() { }

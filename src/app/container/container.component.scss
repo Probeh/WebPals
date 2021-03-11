@@ -37,19 +37,16 @@
       flex: auto;
       max-height: calc(100vh-40px);
       .content-title {
-        @extend .shadow;
         display: flex;
         align-items: center;
-        color: white;
-        padding: 0px 20px;
+        color: $gray;
+        padding: 0px 10px;
         text-transform: capitalize;
-        font-size: 24px;
-        background: $info;
-        height: 80px;
+        height: 40px;
       }
       .content-main {
         padding: 10px;
-        height: calc(100% - 80px);
+        height: calc(100% - 40px);
         max-height: calc(100% - 80px);
         overflow-y: auto;
         overflow-x: hidden;

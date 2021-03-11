@@ -285,8 +285,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/container/container.component.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/container/container.component.ts:36</a></div>
                 </td>
             </tr>
 
@@ -429,9 +429,11 @@ export class ContainerComponent implements OnInit {
       .subscribe({ next: result &#x3D;&gt; this.sidenav &#x3D; result });
     this.router.events
       .subscribe({
-        next: event &#x3D;&gt;
+        next: event &#x3D;&gt;{
           this.route &#x3D; !(event instanceof NavigationEnd) ? this.route :
-            event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)
+            event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;);
+            console.log(event)
+        }
       });
     this.identity.$authChanged
       .subscribe({ next: result &#x3D;&gt; this.account &#x3D; result });
@@ -508,19 +510,16 @@ export class ContainerComponent implements OnInit {
       flex: auto;
       max-height: calc(100vh-40px);
       .content-title {
-        @extend .shadow;
         display: flex;
         align-items: center;
-        color: white;
-        padding: 0px 20px;
+        color: $gray;
+        padding: 0px 10px;
         text-transform: capitalize;
-        font-size: 24px;
-        background: lighten($color: $primary, $amount: 10%);
-        height: 80px;
+        height: 40px;
       }
       .content-main {
         padding: 10px;
-        height: calc(100% - 80px);
+        height: calc(100% - 40px);
         max-height: calc(100% - 80px);
         overflow-y: auto;
         overflow-x: hidden;

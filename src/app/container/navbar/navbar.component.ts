@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MessageType } from '@enums/message.enum';
-import { IdentityService } from '@services/account.service';
-import { MessageService } from '@services/message.service';
+import { Component, OnInit } from '@angular/core'
+import { IdentityService } from '@services/account.service'
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +7,9 @@ import { MessageService } from '@services/message.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  constructor(private identity: IdentityService, private message: MessageService) { }
+  constructor(private identity: IdentityService) { }
   ngOnInit() { }
   public userLogout() {
-    this.identity.userLogout()
-      .then(() => this.message.show('Signed out', '', MessageType.Warning));
+    this.identity.userLogout();
   }
 }

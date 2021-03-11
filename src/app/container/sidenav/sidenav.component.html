@@ -4,6 +4,13 @@
       <i class="fa fa-bars"></i>
     </button>
   </div>
-  <div class="sidenav-content"></div>
+  <div class="sidenav-content">
+    <a class="btn w-100" [routerLink]="['search']">
+      <i class="fa fa-search"></i>
+      <span class="link-text ml-3" [ngClass]="{ hide: !this.state }"
+        >Search</span
+      >
+    </a>
+  </div>
   <div class="sidenav-footer"></div>
 </div>
