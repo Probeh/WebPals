@@ -122,6 +122,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#state">state</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -133,6 +148,10 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onToggleSidenav">onToggleSidenav</a>
                             </li>
                         </ul>
                     </td>
@@ -152,15 +171,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(container: <a href="../injectables/ContainerService.html">ContainerService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:10</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>container</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ContainerService.html" target="_self" >ContainerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -196,8 +245,49 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onToggleSidenav"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onToggleSidenav
+                        </b>
+                        <a href="#onToggleSidenav"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onToggleSidenav()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:15</a></div>
                 </td>
             </tr>
 
@@ -214,12 +304,47 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="state"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            state</b>
+                            <a href="#state"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/container/sidenav/sidenav.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ContainerService } from &#x27;@services/container.service&#x27;;
 
 @Component({
   selector: &#x27;app-sidenav&#x27;,
@@ -227,20 +352,29 @@
   styleUrls: [&#x27;./sidenav.component.scss&#x27;]
 })
 export class SidenavComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  private state: boolean;
+  constructor(private container: ContainerService) {
+    this.state &#x3D; this.container.sidenavClass &#x3D;&#x3D; &#x27;expanded&#x27;;
   }
-
+  ngOnInit() { }
+  public onToggleSidenav() {
+    this.state &#x3D; !this.state;
+    this.container.$sidenavChanged.next(this.state ? &#x27;expanded&#x27; : &#x27;collapsed&#x27;)
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  sidenav works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-sidenav&quot;&gt;
+  &lt;div class&#x3D;&quot;sidenav-header&quot;&gt;
+    &lt;button class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;this.onToggleSidenav()&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-bars&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;sidenav-content&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;sidenav-footer&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -248,22 +382,49 @@ export class SidenavComponent implements OnInit {
                 <p class="comment">
                     <code>./sidenav.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.app-sidenav {
+                <pre class="line-numbers"><code class="language-scss">@import &quot;common.scss&quot;;
+
+.app-sidenav {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: space-between;
 
-  .sidenav-toggle {
-    height: 40px;
+  .sidenav-header {
+    @extend .shadow;
+    width: 100%;
+    color: white;
+    background: $primary;
+
+    min-height: 40px;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .btn {
+      margin-right: 8px;
+      right: 0px;
+      position: absolute;
+      border-radius: 50%;
+      color: white;
+    }
+    .btn:hover {
+      background: $primary;
+      border: 1px solid lighten($color: $primary, $amount: 10%);
+    }
   }
-  .sidenav-start {
-    height: 100px;
-  }
-  .sidenav-center {
+  .sidenav-content {
+    background: lighten($color: $primary, $amount: 10%);
     flex: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
-  .sidenav-bottom {
-    height: 100px;
+  .sidenav-content:hover {
+    overflow: overlay;
+  }
+  .sidenav-footer {
+    background: $primary;
+    height: 40px;
   }
 }
 </code></pre>
@@ -294,7 +455,7 @@ export class SidenavComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  sidenav works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-sidenav">  <div class="sidenav-header">    <button class="btn" (click)="this.onToggleSidenav()">      <i class="fa fa-bars"></i>    </button>  </div>  <div class="sidenav-content"></div>  <div class="sidenav-footer"></div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SidenavComponent'};

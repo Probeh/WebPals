@@ -1,8 +1,4 @@
-* {
-  div {
-    border: 1px solid black;
-  }
-}
+@import "common.scss";
 .app-container {
   height: 100vh;
   margin: 0;
@@ -17,10 +13,10 @@
   .container-sidenav {
     height: 100vh;
   }
-  .collapse {
+  .collapsed {
+    transition: ease-in-out 250ms;
     width: 50px;
     max-width: 50px;
-    transition: ease-in-out 250ms;
   }
   .expanded {
     width: 250px;
@@ -29,7 +25,6 @@
   }
   .container-center {
     flex: auto;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,8 +36,24 @@
     .container-content {
       flex: auto;
       max-height: calc(100vh-40px);
-      overflow-y: auto;
-      overflow-x: hidden;
+      .content-title {
+        @extend .shadow;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 0px 20px;
+        text-transform: capitalize;
+        font-size: 24px;
+        background: $info;
+        height: 80px;
+      }
+      .content-main {
+        padding: 10px;
+        height: calc(100% - 80px);
+        max-height: calc(100% - 80px);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
     }
   }
 }

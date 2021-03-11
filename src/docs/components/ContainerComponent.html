@@ -140,7 +140,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#sidenavClass">sidenavClass</a>
+                                <a href="#sidenav">sidenav</a>
                             </li>
                         </ul>
                     </td>
@@ -285,8 +285,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/container/container.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/container/container.component.ts:34</a></div>
                 </td>
             </tr>
 
@@ -373,12 +373,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="sidenavClass"></a>
+                        <a name="sidenav"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            sidenavClass</b>
-                            <a href="#sidenavClass"><span class="icon ion-ios-link"></span></a>
+                            sidenav</b>
+                            <a href="#sidenav"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -417,14 +417,16 @@ import { ContainerService } from &#x27;@services/container.service&#x27;;
 })
 export class ContainerComponent implements OnInit {
   public route: string &#x3D; &#x27;&#x27;;
-  public sidenavClass: string;
+  public sidenav: string;
   public account: IAccountModel;
 
   constructor(private primengConfig: PrimeNGConfig, private router: Router, private identity: IdentityService, private container: ContainerService) {
     this.primengConfig.ripple &#x3D; true;
     this.account &#x3D; this.identity.account;
-    this.sidenavClass &#x3D; this.container.sidenavClass;
+    this.sidenav &#x3D; this.container.sidenavClass;
 
+    this.container.$sidenavChanged
+      .subscribe({ next: result &#x3D;&gt; this.sidenav &#x3D; result });
     this.router.events
       .subscribe({
         next: event &#x3D;&gt;
@@ -442,18 +444,21 @@ export class ContainerComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot;&gt;
   &lt;div
-    class&#x3D;&quot;container-sidenav&quot;
     *ngIf&#x3D;&quot;this.account?.state&quot;
-    [ngClass]&#x3D;&quot;this.sidenavClass&quot;
+    class&#x3D;&quot;container-sidenav shadow&quot;
+    [ngClass]&#x3D;&quot;this.sidenav&quot;
   &gt;
     &lt;app-sidenav&gt;&lt;/app-sidenav&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;container-center&quot;&gt;
-    &lt;div class&#x3D;&quot;container-navbar&quot; *ngIf&#x3D;&quot;this.account?.state&quot;&gt;
+    &lt;div class&#x3D;&quot;container-navbar shadow&quot; *ngIf&#x3D;&quot;this.account?.state&quot;&gt;
       &lt;app-navbar&gt;&lt;/app-navbar&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;container-content&quot;&gt;
-      &lt;ng-content #content&gt;&lt;/ng-content&gt;
+      &lt;div class&#x3D;&quot;content-title&quot;&gt;{{ this.route }}&lt;/div&gt;
+      &lt;div class&#x3D;&quot;content-main&quot;&gt;
+        &lt;ng-content #content&gt;&lt;/ng-content&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -464,11 +469,7 @@ export class ContainerComponent implements OnInit {
                 <p class="comment">
                     <code>./container.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">* {
-  div {
-    border: 1px solid black;
-  }
-}
+                <pre class="line-numbers"><code class="language-scss">@import &quot;common.scss&quot;;
 .app-container {
   height: 100vh;
   margin: 0;
@@ -483,10 +484,10 @@ export class ContainerComponent implements OnInit {
   .container-sidenav {
     height: 100vh;
   }
-  .collapse {
+  .collapsed {
+    transition: ease-in-out 250ms;
     width: 50px;
     max-width: 50px;
-    transition: ease-in-out 250ms;
   }
   .expanded {
     width: 250px;
@@ -495,7 +496,6 @@ export class ContainerComponent implements OnInit {
   }
   .container-center {
     flex: auto;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -507,8 +507,24 @@ export class ContainerComponent implements OnInit {
     .container-content {
       flex: auto;
       max-height: calc(100vh-40px);
-      overflow-y: auto;
-      overflow-x: hidden;
+      .content-title {
+        @extend .shadow;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 0px 20px;
+        text-transform: capitalize;
+        font-size: 24px;
+        background: lighten($color: $primary, $amount: 10%);
+        height: 80px;
+      }
+      .content-main {
+        padding: 10px;
+        height: calc(100% - 80px);
+        max-height: calc(100% - 80px);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
     }
   }
 }
@@ -540,7 +556,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div    class="container-sidenav"    *ngIf="this.account?.state"    [ngClass]="this.sidenavClass"  >    <app-sidenav></app-sidenav>  </div>  <div class="container-center">    <div class="container-navbar" *ngIf="this.account?.state">      <app-navbar></app-navbar>    </div>    <div class="container-content">      <ng-content #content></ng-content>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div    *ngIf="this.account?.state"    class="container-sidenav shadow"    [ngClass]="this.sidenav"  >    <app-sidenav></app-sidenav>  </div>  <div class="container-center">    <div class="container-navbar shadow" *ngIf="this.account?.state">      <app-navbar></app-navbar>    </div>    <div class="container-content">      <div class="content-title">{{ this.route }}</div>      <div class="content-main">        <ng-content #content></ng-content>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

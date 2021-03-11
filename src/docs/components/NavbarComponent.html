@@ -134,6 +134,10 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#userLogout">userLogout</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -152,15 +156,57 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(identity: <a href="../injectables/IdentityService.html">IdentityService</a>, message: <a href="../injectables/MessageService.html">MessageService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/container/navbar/navbar.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/container/navbar/navbar.component.ts:11</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>identity</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/IdentityService.html" target="_self" >IdentityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>message</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MessageService.html" target="_self" >MessageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -196,8 +242,49 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:13</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userLogout"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            userLogout
+                        </b>
+                        <a href="#userLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>userLogout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/container/navbar/navbar.component.ts:14</a></div>
                 </td>
             </tr>
 
@@ -220,6 +307,9 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { MessageType } from &#x27;@enums/message.enum&#x27;;
+import { IdentityService } from &#x27;@services/account.service&#x27;;
+import { MessageService } from &#x27;@services/message.service&#x27;;
 
 @Component({
   selector: &#x27;app-navbar&#x27;,
@@ -227,20 +317,45 @@
   styleUrls: [&#x27;./navbar.component.scss&#x27;]
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private identity: IdentityService, private message: MessageService) { }
+  ngOnInit() { }
+  public userLogout() {
+    this.identity.userLogout()
+      .then(() &#x3D;&gt; this.message.show(&#x27;Signed out&#x27;, &#x27;&#x27;, MessageType.Warning));
   }
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  navbar works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-navbar&quot;&gt;
+  &lt;div class&#x3D;&quot;navbar-start&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;navbar-links&quot;&gt;
+    &lt;div class&#x3D;&quot;dropdown open&quot;&gt;
+      &lt;button
+        class&#x3D;&quot;btn dropdown-toggle text-white&quot;
+        type&#x3D;&quot;button&quot;
+        id&#x3D;&quot;triggerId&quot;
+        data-toggle&#x3D;&quot;dropdown&quot;
+        aria-haspopup&#x3D;&quot;true&quot;
+        aria-expanded&#x3D;&quot;false&quot;
+      &gt;
+        &lt;i class&#x3D;&quot;fa fa-user-o&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;triggerId&quot;&gt;
+        &lt;button class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;this.userLogout()&quot;&gt;
+          &lt;i class&#x3D;&quot;fa fa-sign-out mr-3&quot;&gt;&lt;/i&gt;Logout
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class&#x3D;&quot;btn navbar-btn&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-code text-white&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button class&#x3D;&quot;btn navbar-btn&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-github text-white&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -248,7 +363,25 @@ export class NavbarComponent implements OnInit {
                 <p class="comment">
                     <code>./navbar.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;common.scss&quot;;
+.app-navbar {
+  align-items: center;
+  background: lighten($color: $primary, $amount: 10%);
+  color: white;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  max-height: 40px;
+  padding: 0px 10px;
+
+  .navbar-start {
+    flex: auto;
+  }
+  .navbar-links {
+    display: flex;
+  }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -276,7 +409,7 @@ export class NavbarComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  navbar works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-navbar">  <div class="navbar-start"></div>  <div class="navbar-links">    <div class="dropdown open">      <button        class="btn dropdown-toggle text-white"        type="button"        id="triggerId"        data-toggle="dropdown"        aria-haspopup="true"        aria-expanded="false"      >        <i class="fa fa-user-o"></i>      </button>      <div class="dropdown-menu" aria-labelledby="triggerId">        <button class="dropdown-item" (click)="this.userLogout()">          <i class="fa fa-sign-out mr-3"></i>Logout        </button>      </div>    </div>    <button class="btn navbar-btn">      <i class="fa fa-code text-white"></i>    </button>    <button class="btn navbar-btn">      <i class="fa fa-github text-white"></i>    </button>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};

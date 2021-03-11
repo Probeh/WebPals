@@ -1,17 +1,20 @@
 <div class="app-container">
   <div
-    class="container-sidenav"
     *ngIf="this.account?.state"
-    [ngClass]="this.sidenavClass"
+    class="container-sidenav shadow"
+    [ngClass]="this.sidenav"
   >
     <app-sidenav></app-sidenav>
   </div>
   <div class="container-center">
-    <div class="container-navbar" *ngIf="this.account?.state">
+    <div class="container-navbar shadow" *ngIf="this.account?.state">
       <app-navbar></app-navbar>
     </div>
     <div class="container-content">
-      <ng-content #content></ng-content>
+      <div class="content-title">{{ this.route }}</div>
+      <div class="content-main">
+        <ng-content #content></ng-content>
+      </div>
     </div>
   </div>
 </div>

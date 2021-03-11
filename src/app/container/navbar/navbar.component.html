@@ -1,3 +1,28 @@
-<p>
-  navbar works!
-</p>
+<div class="app-navbar">
+  <div class="navbar-start"></div>
+  <div class="navbar-links">
+    <div class="dropdown open">
+      <button
+        class="btn dropdown-toggle text-white"
+        type="button"
+        id="triggerId"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="fa fa-user-o"></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="triggerId">
+        <button class="dropdown-item" (click)="this.userLogout()">
+          <i class="fa fa-sign-out mr-3"></i>Logout
+        </button>
+      </div>
+    </div>
+    <button class="btn navbar-btn">
+      <i class="fa fa-code text-white"></i>
+    </button>
+    <button class="btn navbar-btn">
+      <i class="fa fa-github text-white"></i>
+    </button>
+  </div>
+</div>

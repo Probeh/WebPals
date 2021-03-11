@@ -12,14 +12,16 @@ import { ContainerService } from '@services/container.service';
 })
 export class ContainerComponent implements OnInit {
   public route: string = '';
-  public sidenavClass: string;
+  public sidenav: string;
   public account: IAccountModel;
 
   constructor(private primengConfig: PrimeNGConfig, private router: Router, private identity: IdentityService, private container: ContainerService) {
     this.primengConfig.ripple = true;
     this.account = this.identity.account;
-    this.sidenavClass = this.container.sidenavClass;
+    this.sidenav = this.container.sidenavClass;
 
+    this.container.$sidenavChanged
+      .subscribe({ next: result => this.sidenav = result });
     this.router.events
       .subscribe({
         next: event =>

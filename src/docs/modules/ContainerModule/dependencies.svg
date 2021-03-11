@@ -26,81 +26,81 @@
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_ContainerModule_exports</title>
-<polygon fill="none" stroke="black" points="264,-208 264,-260 412,-260 412,-208 264,-208"/>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_ContainerModule_declarations</title>
-<polygon fill="none" stroke="black" points="514,-78 514,-130 658,-130 658,-78 514,-78"/>
+<polygon fill="none" stroke="black" points="255,-208 255,-260 403,-260 403,-208 255,-208"/>
 </g>
 <g id="clust7" class="cluster">
 <title>cluster_ContainerModule_providers</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 506,-130 506,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="168,-78 168,-130 658,-130 658,-78 168,-78"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ContainerModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 160,-130 160,-78 16,-78"/>
 </g>
 <!-- AccountComponent -->
 <g id="node1" class="node">
 <title>AccountComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="650.26,-122 521.74,-122 521.74,-86 650.26,-86 650.26,-122"/>
-<text text-anchor="middle" x="586" y="-99.8" font-family="Times,serif" font-size="14.00">AccountComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="152.26,-122 23.74,-122 23.74,-86 152.26,-86 152.26,-122"/>
+<text text-anchor="middle" x="88" y="-99.8" font-family="Times,serif" font-size="14.00">AccountComponent</text>
 </g>
 <!-- ContainerModule -->
 <g id="node2" class="node">
 <title>ContainerModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="395.26,-187 392.26,-191 371.26,-191 368.26,-187 280.74,-187 280.74,-151 395.26,-151 395.26,-187"/>
-<text text-anchor="middle" x="338" y="-164.8" font-family="Times,serif" font-size="14.00">ContainerModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="386.26,-187 383.26,-191 362.26,-191 359.26,-187 271.74,-187 271.74,-151 386.26,-151 386.26,-187"/>
+<text text-anchor="middle" x="329" y="-164.8" font-family="Times,serif" font-size="14.00">ContainerModule</text>
 </g>
 <!-- AccountComponent&#45;&gt;ContainerModule -->
 <g id="edge1" class="edge">
 <title>AccountComponent&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M586,-122.11C586,-141.34 586,-169 586,-169 586,-169 405.52,-169 405.52,-169"/>
-<polygon fill="black" stroke="black" points="405.52,-165.5 395.52,-169 405.52,-172.5 405.52,-165.5"/>
+<path fill="none" stroke="black" d="M88,-122.11C88,-141.34 88,-169 88,-169 88,-169 261.58,-169 261.58,-169"/>
+<polygon fill="black" stroke="black" points="261.58,-172.5 271.58,-169 261.58,-165.5 261.58,-172.5"/>
 </g>
 <!-- AccountComponent  -->
 <g id="node3" class="node">
 <title>AccountComponent </title>
-<polygon fill="#fb8072" stroke="black" points="404.26,-252 271.74,-252 271.74,-216 404.26,-216 404.26,-252"/>
-<text text-anchor="middle" x="338" y="-229.8" font-family="Times,serif" font-size="14.00">AccountComponent </text>
+<polygon fill="#fb8072" stroke="black" points="395.26,-252 262.74,-252 262.74,-216 395.26,-216 395.26,-252"/>
+<text text-anchor="middle" x="329" y="-229.8" font-family="Times,serif" font-size="14.00">AccountComponent </text>
 </g>
 <!-- ContainerModule&#45;&gt;AccountComponent  -->
 <g id="edge2" class="edge">
 <title>ContainerModule&#45;&gt;AccountComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M338,-187.11C338,-187.11 338,-205.99 338,-205.99"/>
-<polygon fill="black" stroke="black" points="334.5,-205.99 338,-215.99 341.5,-205.99 334.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M329,-187.11C329,-187.11 329,-205.99 329,-205.99"/>
+<polygon fill="black" stroke="black" points="325.5,-205.99 329,-215.99 332.5,-205.99 325.5,-205.99"/>
 </g>
 <!-- ContainerService -->
 <g id="node4" class="node">
 <title>ContainerService</title>
-<ellipse fill="#fdb462" stroke="black" cx="420" cy="-104" rx="78.15" ry="18"/>
-<text text-anchor="middle" x="420" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerService</text>
+<ellipse fill="#fdb462" stroke="black" cx="572" cy="-104" rx="78.15" ry="18"/>
+<text text-anchor="middle" x="572" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerService</text>
 </g>
 <!-- ContainerService&#45;&gt;ContainerModule -->
 <g id="edge3" class="edge">
 <title>ContainerService&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M368.65,-117.78C368.65,-117.78 368.65,-140.55 368.65,-140.55"/>
-<polygon fill="black" stroke="black" points="365.15,-140.55 368.65,-150.55 372.15,-140.55 365.15,-140.55"/>
+<path fill="none" stroke="black" d="M572,-122.11C572,-141.34 572,-169 572,-169 572,-169 396.28,-169 396.28,-169"/>
+<polygon fill="black" stroke="black" points="396.28,-165.5 386.28,-169 396.28,-172.5 396.28,-165.5"/>
 </g>
 <!-- GithubService -->
 <g id="node5" class="node">
 <title>GithubService</title>
-<ellipse fill="#fdb462" stroke="black" cx="257" cy="-104" rx="66.63" ry="18"/>
-<text text-anchor="middle" x="257" y="-99.8" font-family="Times,serif" font-size="14.00">GithubService</text>
+<ellipse fill="#fdb462" stroke="black" cx="409" cy="-104" rx="66.63" ry="18"/>
+<text text-anchor="middle" x="409" y="-99.8" font-family="Times,serif" font-size="14.00">GithubService</text>
 </g>
 <!-- GithubService&#45;&gt;ContainerModule -->
 <g id="edge4" class="edge">
 <title>GithubService&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M302.22,-117.47C302.22,-117.47 302.22,-140.86 302.22,-140.86"/>
-<polygon fill="black" stroke="black" points="298.72,-140.86 302.22,-150.86 305.72,-140.86 298.72,-140.86"/>
+<path fill="none" stroke="black" d="M364.28,-117.47C364.28,-117.47 364.28,-140.86 364.28,-140.86"/>
+<polygon fill="black" stroke="black" points="360.78,-140.86 364.28,-150.86 367.78,-140.86 360.78,-140.86"/>
 </g>
 <!-- NetworkService -->
 <g id="node6" class="node">
 <title>NetworkService</title>
-<ellipse fill="#fdb462" stroke="black" cx="98" cy="-104" rx="73.55" ry="18"/>
-<text text-anchor="middle" x="98" y="-99.8" font-family="Times,serif" font-size="14.00">NetworkService</text>
+<ellipse fill="#fdb462" stroke="black" cx="250" cy="-104" rx="73.55" ry="18"/>
+<text text-anchor="middle" x="250" y="-99.8" font-family="Times,serif" font-size="14.00">NetworkService</text>
 </g>
 <!-- NetworkService&#45;&gt;ContainerModule -->
 <g id="edge5" class="edge">
 <title>NetworkService&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M98,-122.11C98,-141.34 98,-169 98,-169 98,-169 270.51,-169 270.51,-169"/>
-<polygon fill="black" stroke="black" points="270.51,-172.5 280.51,-169 270.51,-165.5 270.51,-172.5"/>
+<path fill="none" stroke="black" d="M297.7,-117.78C297.7,-117.78 297.7,-140.55 297.7,-140.55"/>
+<polygon fill="black" stroke="black" points="294.2,-140.55 297.7,-150.55 301.2,-140.55 294.2,-140.55"/>
 </g>
 </g>
 </svg>

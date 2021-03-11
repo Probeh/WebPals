@@ -1,0 +1,18 @@
+@import "common.scss";
+.app-navbar {
+  align-items: center;
+  background: lighten($color: $primary, $amount: 10%);
+  color: white;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  max-height: 40px;
+  padding: 0px 10px;
+
+  .navbar-start {
+    flex: auto;
+  }
+  .navbar-links {
+    display: flex;
+  }
+}

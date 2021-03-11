@@ -434,9 +434,9 @@ export class IdentityService {
       next: (result: IAccountModel) &#x3D;&gt; {
         if (result.state) {
           localStorage.setItem(&#x27;Identity&#x27;, JSON.stringify(result));
-          this.router.navigate([&#x27;search&#x27;]);
         }
         else localStorage.removeItem(&#x27;Identity&#x27;);
+        this.router.navigate([result.state ? &#x27;search&#x27; : &#x27;auth&#x27;]);
         this.account &#x3D; result;
       }
     });

@@ -15,9 +15,9 @@ export class IdentityService {
       next: (result: IAccountModel) => {
         if (result.state) {
           localStorage.setItem('Identity', JSON.stringify(result));
-          this.router.navigate(['search']);
         }
         else localStorage.removeItem('Identity');
+        this.router.navigate([result.state ? 'search' : 'auth']);
         this.account = result;
       }
     });
