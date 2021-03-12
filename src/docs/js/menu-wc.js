@@ -171,13 +171,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/GithubModule.html" data-type="entity-link">GithubModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-GithubModule-b1c3d58dac475c2c386c0de6e43e70bd"' : 'data-target="#xs-components-links-module-GithubModule-b1c3d58dac475c2c386c0de6e43e70bd"' }>
+                                            'data-target="#components-links-module-GithubModule-495762987303b4da0b2f58a3985aeecd"' : 'data-target="#xs-components-links-module-GithubModule-495762987303b4da0b2f58a3985aeecd"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GithubModule-b1c3d58dac475c2c386c0de6e43e70bd"' :
-                                            'id="xs-components-links-module-GithubModule-b1c3d58dac475c2c386c0de6e43e70bd"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GithubModule-495762987303b4da0b2f58a3985aeecd"' :
+                                            'id="xs-components-links-module-GithubModule-495762987303b4da0b2f58a3985aeecd"' }>
                                             <li class="link">
                                                 <a href="components/AccountComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AccountComponent</a>
@@ -234,12 +234,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="classes/AppConfig.html" data-type="entity-link">AppConfig</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/GitProfile.html" data-type="entity-link">GitProfile</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/GitSearch.html" data-type="entity-link">GitSearch</a>
                             </li>
                         </ul>
                     </li>
@@ -313,6 +307,15 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/IAppConfig.html" data-type="entity-link">IAppConfig</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IGitProfile.html" data-type="entity-link">IGitProfile</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IGitRepository.html" data-type="entity-link">IGitRepository</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IGitSearch.html" data-type="entity-link">IGitSearch</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/IHttpRequest.html" data-type="entity-link">IHttpRequest</a>

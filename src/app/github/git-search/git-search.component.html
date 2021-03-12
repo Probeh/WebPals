@@ -1,13 +1,29 @@
-<form (ngSubmit)="this.onSearch()" class="mt-3">
-  <div class="p-float-label p-input-icon-left">
-    <i class="fa fa-github"></i>
-    <input
-      #search
-      type="text"
-      id="search"
-      autocomplete="off"
-      pInputText
-    />
-    <label for="search">Search</label>
+<form (ngSubmit)="this.onSearch()" class="m-3 p-3">
+  <div class="row">
+    <div class="col-11 p-0">
+      <div class="p-float-label p-input-icon-left">
+        <i class="fa fa-github"></i>
+        <input
+          [(ngModel)]="this.search"
+          autocomplete="off"
+          id="search"
+          name="search"
+          pInputText
+          type="text"
+        />
+        <label for="search">Search</label>
+      </div>
+    </div>
+    <div class="col-1 p-0">
+      <button
+        type="submit"
+        class="btn btn-outline-primary btn-lg h-100"
+        style="border-radius: 0"
+      >
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
   </div>
 </form>
+<hr />
+<app-git-result [profiles]="this.profiles"></app-git-result>

@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
     <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">
-      <div class="p-float-label p-input-icon-left">
+      <div class="p-float-label p-input-icon-left mb-3">
         <i class="pi pi-user"></i>
         <input
           #username
@@ -16,7 +16,7 @@
         />
         <label for="username">Username</label>
       </div>
-      <div class="p-float-label p-input-icon-left">
+      <div class="p-float-label p-input-icon-left mb-3">
         <i class="pi pi-lock"></i>
         <input
           #password
@@ -36,9 +36,10 @@
         <strong>{{ this.loginForm.errors?.credentials }}</strong>
       </div>
       <button
-        id="login-btn"
-        class="btn"
         [ngClass]="{ 'btn-outline-primary': this.loginForm.valid }"
+        class="btn"
+        id="login-btn"
+        type="submit"
         [disabled]="!this.loginForm.valid"
       >
         <i class="fa fa-sign-in"></i>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core'
+import { IGitProfile } from '@models/git-profile'
 
 @Component({
   selector: 'app-git-result',
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./git-result.component.scss']
 })
 export class GitResultComponent implements OnInit {
-
+  @Input() public profiles: IGitProfile[];
   constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

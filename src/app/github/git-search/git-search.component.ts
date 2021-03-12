@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { GithubService } from '@services/github.service';
+import { Component, OnInit } from '@angular/core'
+import { IGitProfile } from '@models/git-profile'
+import { GithubService } from '@services/github.service'
 
 @Component({
   selector: 'app-git-search',
@@ -7,9 +8,12 @@ import { GithubService } from '@services/github.service';
   styleUrls: ['./git-search.component.scss']
 })
 export class GitSearchComponent implements OnInit {
+  public search: string;
+  public profiles: IGitProfile[];
   constructor(private github: GithubService) { }
   ngOnInit() { }
-  public onSearch(params?: any) {
-
+  public onSearch() {
+    this.profiles = null;
+    this.github.searchUsers(this.search).then(result => this.profiles = result);
   }
 }

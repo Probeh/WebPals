@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators'
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Providers } from '@enums/provider.enum'
+import { endpoints } from '@env/environment'
 
 @Injectable()
 export class IdentityInterceptor implements HttpInterceptor {
@@ -12,7 +13,7 @@ export class IdentityInterceptor implements HttpInterceptor {
 
     if (req.url.startsWith(Providers.Identity)) {
       req = req.clone({
-        url: './assets/accounts.json'
+        url: endpoints.identity.baseUrl
       });
     }
     return next.handle(req)
