@@ -26,7 +26,7 @@ export class GithubService {
                 else this.profiles.push(result);
 
                 if (result.id == response.items[response.items.length - 1].id)
-                  resolve(this.profiles.slice())
+                  resolve(this.profiles.slice().filter(x => response.items.some(item => item.id == x.id)));
               });
           })
         });

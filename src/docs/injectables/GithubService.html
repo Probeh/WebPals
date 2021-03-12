@@ -566,7 +566,7 @@ export class GithubService {
                 else this.profiles.push(result);
 
                 if (result.id &#x3D;&#x3D; response.items[response.items.length - 1].id)
-                  resolve(this.profiles.slice())
+                  resolve(this.profiles.slice().filter(x &#x3D;&gt; response.items.some(item &#x3D;&gt; item.id &#x3D;&#x3D; x.id)));
               });
           })
         });

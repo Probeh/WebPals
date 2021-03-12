@@ -473,23 +473,23 @@ export class AccountComponent implements OnInit {
         /&gt;
         &lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
       &lt;/div&gt;
-      &lt;div
-        *ngIf&#x3D;&quot;this.loginForm.errors?.credentials&quot;
-        class&#x3D;&quot;alert alert-danger mb-4&quot;
-        role&#x3D;&quot;alert&quot;
-      &gt;
-        &lt;strong&gt;{{ this.loginForm.errors?.credentials }}&lt;/strong&gt;
-      &lt;/div&gt;
       &lt;button
-        [ngClass]&#x3D;&quot;{ &#x27;btn-outline-primary&#x27;: this.loginForm.valid }&quot;
-        class&#x3D;&quot;btn&quot;
-        id&#x3D;&quot;login-btn&quot;
-        type&#x3D;&quot;submit&quot;
-        [disabled]&#x3D;&quot;!this.loginForm.valid&quot;
+      [ngClass]&#x3D;&quot;{ &#x27;btn-outline-primary&#x27;: this.loginForm.valid }&quot;
+      class&#x3D;&quot;btn&quot;
+      id&#x3D;&quot;login-btn&quot;
+      type&#x3D;&quot;submit&quot;
+      [disabled]&#x3D;&quot;!this.loginForm.valid&quot;
       &gt;
-        &lt;i class&#x3D;&quot;fa fa-sign-in&quot;&gt;&lt;/i&gt;
-        Login
-      &lt;/button&gt;
+      &lt;i class&#x3D;&quot;fa fa-sign-in&quot;&gt;&lt;/i&gt;
+      Login
+    &lt;/button&gt;
+    &lt;div
+      *ngIf&#x3D;&quot;this.loginForm.errors?.credentials&quot;
+      class&#x3D;&quot;alert alert-danger mt-4&quot;
+      role&#x3D;&quot;alert&quot;
+    &gt;
+      &lt;strong&gt;{{ this.loginForm.errors?.credentials }}&lt;/strong&gt;
+    &lt;/div&gt;
     &lt;/form&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -555,7 +555,7 @@ export class AccountComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card card-form">  <div class="card-header shadow bg-green text-white">    <i class="fa fa-user"></i>Account Login  </div>  <div class="card-body">    <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">      <div class="p-float-label p-input-icon-left mb-3">        <i class="pi pi-user"></i>        <input          #username          formControlName="user"          type="text"          id="username"          autocomplete="off"          pInputText        />        <label for="username">Username</label>      </div>      <div class="p-float-label p-input-icon-left mb-3">        <i class="pi pi-lock"></i>        <input          #password          formControlName="pass"          type="password"          id="password"          autocomplete="off"          pInputText        />        <label for="password">Password</label>      </div>      <div        *ngIf="this.loginForm.errors?.credentials"        class="alert alert-danger mb-4"        role="alert"      >        <strong>{{ this.loginForm.errors?.credentials }}</strong>      </div>      <button        [ngClass]="{ \'btn-outline-primary\': this.loginForm.valid }"        class="btn"        id="login-btn"        type="submit"        [disabled]="!this.loginForm.valid"      >        <i class="fa fa-sign-in"></i>        Login      </button>    </form>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card-form">  <div class="card-header shadow bg-green text-white">    <i class="fa fa-user"></i>Account Login  </div>  <div class="card-body">    <form (ngSubmit)="this.onLogin()" [formGroup]="this.loginForm">      <div class="p-float-label p-input-icon-left mb-3">        <i class="pi pi-user"></i>        <input          #username          formControlName="user"          type="text"          id="username"          autocomplete="off"          pInputText        />        <label for="username">Username</label>      </div>      <div class="p-float-label p-input-icon-left mb-3">        <i class="pi pi-lock"></i>        <input          #password          formControlName="pass"          type="password"          id="password"          autocomplete="off"          pInputText        />        <label for="password">Password</label>      </div>      <button      [ngClass]="{ \'btn-outline-primary\': this.loginForm.valid }"      class="btn"      id="login-btn"      type="submit"      [disabled]="!this.loginForm.valid"      >      <i class="fa fa-sign-in"></i>      Login    </button>    <div      *ngIf="this.loginForm.errors?.credentials"      class="alert alert-danger mt-4"      role="alert"    >      <strong>{{ this.loginForm.errors?.credentials }}</strong>    </div>    </form>  </div></div></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AccountComponent'};

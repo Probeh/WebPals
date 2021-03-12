@@ -28,6 +28,10 @@
 <title>cluster_ContainerModule_providers</title>
 <polygon fill="none" stroke="black" points="352,-78 352,-130 842,-130 842,-78 352,-78"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_ContainerModule_exports</title>
+<polygon fill="none" stroke="black" points="360,-208 360,-260 508,-260 508,-208 360,-208"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_ContainerModule_declarations</title>
 <polygon fill="none" stroke="black" points="200,-78 200,-130 344,-130 344,-78 200,-78"/>
@@ -35,10 +39,6 @@
 <g id="clust4" class="cluster">
 <title>cluster_ContainerModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 192,-130 192,-78 16,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_ContainerModule_exports</title>
-<polygon fill="none" stroke="black" points="360,-208 360,-260 508,-260 508,-208 360,-208"/>
 </g>
 <!-- AccountComponent -->
 <g id="node1" class="node">

@@ -13,18 +13,36 @@
         <th>Name</th>
         <th>Following</th>
         <th>Followers</th>
+        <th>Details</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-profile>
       <tr>
         <td>
-          <img class="avatar" [src]="profile.avatar_url" />
+          <img class="avatar shadow" [src]="profile.avatar_url" />
         </td>
         <td>{{ profile.id }}</td>
         <td>{{ profile.name | titlecase }}</td>
         <td>{{ profile.following }}</td>
         <td>{{ profile.followers }}</td>
+        <td>
+          <button
+            class="btn btn-outline-green"
+            style="border-radius: 50%; width: 40px; height: 40px"
+            (click)="this.onShowDialog(profile)"
+          >
+            <i class="fa fa-address-card"></i>
+          </button>
+        </td>
       </tr>
     </ng-template>
   </p-table>
 </ng-template>
+<p-dialog
+  #dialog
+  [(visible)]="this.showDialog"
+  [header]="'Profile Details'"
+  [style]="{ width: '75vw' }"
+>
+  <app-git-profile [profile]="this.profileItem"></app-git-profile>
+</p-dialog>

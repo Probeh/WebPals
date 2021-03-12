@@ -193,30 +193,32 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BadgeModule         } from &#x27;primeng/badge&#x27;
-import { ButtonModule        } from &#x27;primeng/button&#x27;
-import { InputTextModule     } from &#x27;primeng/inputtext&#x27;
-import { ProgressBarModule   } from &#x27;primeng/progressbar&#x27;
-import { RatingModule        } from &#x27;primeng/rating&#x27;
-import { TableModule         } from &#x27;primeng/table&#x27;
-import { CommonModule        } from &#x27;@angular/common&#x27;
-import { NgModule            } from &#x27;@angular/core&#x27;
-import { FormsModule         } from &#x27;@angular/forms&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BadgeModule } from &#x27;primeng/badge&#x27;
+import { ButtonModule } from &#x27;primeng/button&#x27;
+import { DialogModule } from &#x27;primeng/dialog&#x27;
+import { InputTextModule } from &#x27;primeng/inputtext&#x27;
+import { ProgressBarModule } from &#x27;primeng/progressbar&#x27;
+import { RatingModule } from &#x27;primeng/rating&#x27;
+import { TableModule } from &#x27;primeng/table&#x27;
+import { CommonModule } from &#x27;@angular/common&#x27;
+import { NgModule } from &#x27;@angular/core&#x27;
+import { FormsModule } from &#x27;@angular/forms&#x27;
 import { GitProfileComponent } from &#x27;@github/git-profile/git-profile.component&#x27;
-import { GitResultComponent  } from &#x27;@github/git-result/git-result.component&#x27;
-import { GitSearchComponent  } from &#x27;@github/git-search/git-search.component&#x27;
+import { GitResultComponent } from &#x27;@github/git-result/git-result.component&#x27;
+import { GitSearchComponent } from &#x27;@github/git-search/git-search.component&#x27;
 import { GithubRoutingModule } from &#x27;@github/github-routing.module&#x27;
-import { GithubComponent     } from &#x27;@github/github.component&#x27;
+import { GithubComponent } from &#x27;@github/github.component&#x27;
 
 const components &#x3D; [GithubComponent, GitSearchComponent, GitProfileComponent, GitResultComponent]
 
 @NgModule({
   imports: [
     CommonModule,
-    GithubRoutingModule,
     BadgeModule,
     ButtonModule,
+    DialogModule,
     FormsModule,
+    GithubRoutingModule,
     InputTextModule,
     ProgressBarModule,
     RatingModule,

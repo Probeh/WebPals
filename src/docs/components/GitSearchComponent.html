@@ -399,30 +399,26 @@ export class GitSearchComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;form (ngSubmit)&#x3D;&quot;this.onSearch()&quot; class&#x3D;&quot;m-3 p-3&quot;&gt;
-  &lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;div class&#x3D;&quot;col-11 p-0&quot;&gt;
-      &lt;div class&#x3D;&quot;p-float-label p-input-icon-left&quot;&gt;
-        &lt;i class&#x3D;&quot;fa fa-github&quot;&gt;&lt;/i&gt;
-        &lt;input
-          [(ngModel)]&#x3D;&quot;this.search&quot;
-          autocomplete&#x3D;&quot;off&quot;
-          id&#x3D;&quot;search&quot;
-          name&#x3D;&quot;search&quot;
-          pInputText
-          type&#x3D;&quot;text&quot;
-        /&gt;
-        &lt;label for&#x3D;&quot;search&quot;&gt;Search&lt;/label&gt;
-      &lt;/div&gt;
+  &lt;div style&#x3D;&quot;display: flex; justify-content: center; align-items: center;&quot;&gt;
+    &lt;div class&#x3D;&quot;p-float-label p-input-icon-left&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-github&quot;&gt;&lt;/i&gt;
+      &lt;input
+        [(ngModel)]&#x3D;&quot;this.search&quot;
+        autocomplete&#x3D;&quot;off&quot;
+        id&#x3D;&quot;search&quot;
+        name&#x3D;&quot;search&quot;
+        pInputText
+        type&#x3D;&quot;text&quot;
+      /&gt;
+      &lt;label for&#x3D;&quot;search&quot;&gt;Search&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;col-1 p-0&quot;&gt;
-      &lt;button
-        type&#x3D;&quot;submit&quot;
-        class&#x3D;&quot;btn btn-outline-primary btn-lg h-100&quot;
-        style&#x3D;&quot;border-radius: 0&quot;
-      &gt;
-        &lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
+    &lt;button
+      type&#x3D;&quot;submit&quot;
+      class&#x3D;&quot;btn btn-outline-primary btn-lg h-100&quot;
+      style&#x3D;&quot;border-radius: 0&quot;
+    &gt;
+      &lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 &lt;hr /&gt;
@@ -462,7 +458,7 @@ export class GitSearchComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><form (ngSubmit)="this.onSearch()" class="m-3 p-3">  <div class="row">    <div class="col-11 p-0">      <div class="p-float-label p-input-icon-left">        <i class="fa fa-github"></i>        <input          [(ngModel)]="this.search"          autocomplete="off"          id="search"          name="search"          pInputText          type="text"        />        <label for="search">Search</label>      </div>    </div>    <div class="col-1 p-0">      <button        type="submit"        class="btn btn-outline-primary btn-lg h-100"        style="border-radius: 0"      >        <i class="fa fa-search"></i>      </button>    </div>  </div></form><hr /><app-git-result [profiles]="this.profiles"></app-git-result></div>'
+        var COMPONENT_TEMPLATE = '<div><form (ngSubmit)="this.onSearch()" class="m-3 p-3">  <div style="display: flex; justify-content: center; align-items: center;">    <div class="p-float-label p-input-icon-left">      <i class="fa fa-github"></i>      <input        [(ngModel)]="this.search"        autocomplete="off"        id="search"        name="search"        pInputText        type="text"      />      <label for="search">Search</label>    </div>    <button      type="submit"      class="btn btn-outline-primary btn-lg h-100"      style="border-radius: 0"    >      <i class="fa fa-search"></i>    </button>  </div></form><hr /><app-git-result [profiles]="this.profiles"></app-git-result></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'GitProfileComponent', 'selector': 'app-git-profile'},{'name': 'GitResultComponent', 'selector': 'app-git-result'},{'name': 'GitSearchComponent', 'selector': 'app-git-search'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GitSearchComponent'};

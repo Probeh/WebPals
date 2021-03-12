@@ -1,3 +1,52 @@
-<p>
-  git-profile works!
-</p>
+<div class="row">
+  <div class="col-3 p-1">
+    <ul class="list-group text-left">
+      <li class="list-group-item text-center">
+        <img
+          class="shadow"
+          src="{{ this.profile?.avatar_url }}"
+          style="border-radius: 50%; width: 50px"
+        />
+      </li>
+      <li class="list-group-item"><b>Email:</b> {{ this.profile?.email }}</li>
+      <li class="list-group-item">
+        <b>Company:</b> {{ this.profile?.company }}
+      </li>
+      <li class="list-group-item">
+        <b>Experience:</b> {{ this.profile?.experience }} Years
+      </li>
+      <li class="list-group-item">
+        <b>Following:</b> {{ this.profile?.following }}
+      </li>
+      <li class="list-group-item">
+        <b>Followers:</b> {{ this.profile?.followers }}
+      </li>
+    </ul>
+  </div>
+  <div class="col-9 p-1">
+    <table class="table" style="max-height: 100%;">
+      <thead>
+        <tr>
+          <th>Repo</th>
+          <th>Private</th>
+          <th>Size</th>
+          <th>Watchers</th>
+          <th>Forks</th>
+          <th>Issues</th>
+          <th>Language</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let repo of this.profile?.repositories">
+          <th>{{ repo.name }}</th>
+          <th>{{ repo.private }}</th>
+          <th>{{ repo.size }}</th>
+          <th>{{ repo.watchers_count }}</th>
+          <th>{{ repo.forks_count }}</th>
+          <th>{{ repo.has_issues }}</th>
+          <th>{{ repo.language }}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
